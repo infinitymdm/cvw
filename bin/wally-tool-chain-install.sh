@@ -113,7 +113,7 @@ cd ../arch_test_target/spike/device
 sed -i 's/--isa=rv32ic/--isa=rv32iac/' rv32i_m/privilege/Makefile.include
 sed -i 's/--isa=rv64ic/--isa=rv64iac/' rv64i_m/privilege/Makefile.include
 
-# Wally needs Verilator 5.0 or later.
+# Wally needs Verilator 5.021 or later.
 # Verilator needs to be built from scratch to get the latest version
 # apt-get install verilator installs version 4.028 as of 6/8/23
 sudo apt-get install -y perl g++ ccache help2man libgoogle-perftools-dev numactl perl-doc zlib1g 
@@ -124,7 +124,7 @@ git clone https://github.com/verilator/verilator   # Only first time
 unset VERILATOR_ROOT     # For bash
 cd verilator
 git pull         # Make sure git repository is up-to-date
-git checkout master      # Use development branch (e.g. recent bug fixes)
+git checkout master      
 autoconf         # Create ./configure script
 ./configure      # Configure and create Makefile
 make -j ${NUM_THREADS}  # Build Verilator itself (if error, try just 'make')
@@ -137,6 +137,27 @@ sudo make install
 # package manager. Sail has so many dependencies that it can be difficult to install.
 # This script works for Ubuntu.
 
+# Alex Solomatnikov found these commands worked to build Sail for Centos 8 on 1/12/24
+#sudo su -
+#dnf install ocaml.x86_64
+#pip3 install z3-solver
+#wget https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh
+#sh install.sh
+#opam init
+#exit
+#ocaml -version
+#opam switch create 5.1.0
+#eval $(opam config env)
+#git clone --recurse-submodules git@github.com:riscv/sail-riscv.git
+#cd sail-riscv
+#make
+#ARCH=RV32 make
+#ARCH=RV64 make
+#git log -1
+#cp -p c_emulator/riscv_sim_RV* /tools/sail-riscv/d7a3d8012fd579f40e53a29569141d72dd5e0c32/bin/.
+
+
+# This was an earlier attemp to prepare to install Sail on RedHat 8
 # Do these commands only for RedHat / Rocky 8 to build from source.
 #cd $RISCV
 #git clone https://github.com/Z3Prover/z3.git
@@ -166,7 +187,7 @@ sudo ln -sf $RISCV/sail-riscv/c_emulator/riscv_sim_RV32 /usr/bin/riscv_sim_RV32
 
 # riscof
 sudo pip3 install -U testresources riscv_config
-pip3 install git+https://github.com/riscv/riscof.git
+sudo pip3 install git+https://github.com/riscv/riscof.git
 
 # Download OSU Skywater 130 cell library
 sudo mkdir -p $RISCV/cad/lib

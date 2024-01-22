@@ -55,7 +55,7 @@ module mmu import cvw::*;  #(parameter cvw_t P,
   output logic                 UpdateDA,                                                  // page fault due to setting dirty or access bit
   output logic                 LoadMisalignedFaultM, StoreAmoMisalignedFaultM,            // misaligned fault sources
   // PMA checker signals
-  input  logic [3:0]           CMOp,                                                      // Cache management instructions
+  input  logic [3:0]           CMOpM,                                                     // Cache management instructions
   input  logic                 AtomicAccessM, ExecuteAccessF, WriteAccessM, ReadAccessM,  // access type
   input var logic [7:0]        PMPCFG_ARRAY_REGW[P.PMP_ENTRIES-1:0],                      // PMP configuration
   input var logic [P.PA_BITS-3:0] PMPADDR_ARRAY_REGW[P.PMP_ENTRIES-1:0]                   // PMP addresses
@@ -85,7 +85,7 @@ module mmu import cvw::*;  #(parameter cvw_t P,
           .SATP_MODE(SATP_REGW[P.XLEN-1:P.XLEN-P.SVMODE_BITS]),
           .SATP_ASID(SATP_REGW[P.ASID_BASE+P.ASID_BITS-1:P.ASID_BASE]),
           .VAdr(VAdr[P.XLEN-1:0]), .STATUS_MXR, .STATUS_SUM, .STATUS_MPRV, .STATUS_MPP, .ENVCFG_PBMTE, .ENVCFG_ADUE,
-          .PrivilegeModeW, .ReadAccess, .WriteAccess, .CMOp,
+          .PrivilegeModeW, .ReadAccess, .WriteAccess, .CMOpM,
           .DisableTranslation, .PTE, .PageTypeWriteVal,
           .TLBWrite, .TLBFlush, .TLBPAdr, .TLBMiss, .TLBHit, 
           .Translate, .TLBPageFault, .UpdateDA, .PBMemoryType);
@@ -107,7 +107,7 @@ module mmu import cvw::*;  #(parameter cvw_t P,
   // Check physical memory accesses
   ///////////////////////////////////////////
 
-  pmachecker #(P) pmachecker(.PhysicalAddress, .Size, .CMOp, 
+  pmachecker #(P) pmachecker(.PhysicalAddress, .Size, .CMOpM, 
     .AtomicAccessM, .ExecuteAccessF, .WriteAccessM, .ReadAccessM, .PBMemoryType,
     .Cacheable, .Idempotent, .SelTIM, 
     .PMAInstrAccessFaultF, .PMALoadAccessFaultM, .PMAStoreAmoAccessFaultM);
@@ -115,7 +115,7 @@ module mmu import cvw::*;  #(parameter cvw_t P,
   if (P.PMP_ENTRIES > 0) begin : pmp
     pmpchecker #(P) pmpchecker(.PhysicalAddress, .PrivilegeModeW,
       .PMPCFG_ARRAY_REGW, .PMPADDR_ARRAY_REGW,
-      .ExecuteAccessF, .WriteAccessM, .ReadAccessM, .CMOp, 
+      .ExecuteAccessF, .WriteAccessM, .ReadAccessM, .CMOpM, 
       .PMPInstrAccessFaultF, .PMPLoadAccessFaultM, .PMPStoreAmoAccessFaultM);
   end else begin
     assign PMPInstrAccessFaultF     = 0;
@@ -140,10 +140,10 @@ module mmu import cvw::*;  #(parameter cvw_t P,
       2'b11:  DataMisalignedM = |VAdr[2:0];        // ld, sd, fld, fsd
     endcase 
   assign LoadMisalignedFaultM     = DataMisalignedM & ReadNoAmoAccessM & ~(P.ZICCLSM_SUPPORTED & Cacheable); 
-  assign StoreAmoMisalignedFaultM = DataMisalignedM & WriteAccessM & ~(P.ZICCLSM_SUPPORTED & Cacheable);
+  assign StoreAmoMisalignedFaultM = DataMisalignedM & WriteAccessM & (~(P.ZICCLSM_SUPPORTED & Cacheable) | ReadAccessM); // Misaligned AMO faults even if ZICCLSM supported
 
   // Specify which type of page fault is occurring
   assign InstrPageFaultF    = TLBPageFault & ExecuteAccessF;
   assign LoadPageFaultM     = TLBPageFault & ReadNoAmoAccessM; 
-  assign StoreAmoPageFaultM = TLBPageFault & WriteAccessM;
+  assign StoreAmoPageFaultM = TLBPageFault & (WriteAccessM | (|CMOpM));
 endmodule

@@ -35,7 +35,7 @@ module testbench;
   /* verilator lint_off WIDTHTRUNC */
   /* verilator lint_off WIDTHEXPAND */
   parameter DEBUG=0;
-  parameter TEST="none";
+  parameter string TEST="arch64m";
   parameter PrintHPMCounters=0;
   parameter BPRED_LOGGER=0;
   parameter I_CACHE_ADDR_LOGGER=0;
@@ -105,6 +105,7 @@ module testbench;
         "arch64f_fma":  if (P.F_SUPPORTED)        tests = arch64f_fma;
         "arch64d_fma":  if (P.D_SUPPORTED)        tests = arch64d_fma;  
         "arch64zifencei":  if (P.ZIFENCEI_SUPPORTED) tests = arch64zifencei;
+        "arch64zicond":  if (P.ZICOND_SUPPORTED)  tests = arch64zicond;
         "imperas64i":                             tests = imperas64i;
         "imperas64f":   if (P.F_SUPPORTED)        tests = imperas64f;
         "imperas64d":   if (P.D_SUPPORTED)        tests = imperas64d;
@@ -126,6 +127,9 @@ module testbench;
         "arch64zbs":     if (P.ZBS_SUPPORTED)     tests = arch64zbs;
         "arch64zicboz":  if (P.ZICBOZ_SUPPORTED)  tests = arch64zicboz;
         "arch64zcb":     if (P.ZCB_SUPPORTED)     tests = arch64zcb;
+        "arch64zfh":     if (P.ZFH_SUPPORTED)     tests = arch64zfh;
+        "arch64zfaf":    if (P.ZFA_SUPPORTED)     tests = arch64zfaf;
+        "arch64zfad":    if (P.ZFA_SUPPORTED & P.D_SUPPORTED)  tests = arch64zfad;
       endcase 
     end else begin // RV32
       case (TEST)
@@ -142,6 +146,7 @@ module testbench;
         "arch32f_fma":  if (P.F_SUPPORTED)        tests = arch32f_fma;
         "arch32d_fma":  if (P.D_SUPPORTED)        tests = arch32d_fma;
         "arch32zifencei":     if (P.ZIFENCEI_SUPPORTED) tests = arch32zifencei;
+        "arch32zicond":  if (P.ZICOND_SUPPORTED)  tests = arch32zicond;
         "imperas32i":                             tests = imperas32i;
         "imperas32f":   if (P.F_SUPPORTED)        tests = imperas32f;
         "imperas32m":   if (P.M_SUPPORTED)        tests = imperas32m;
@@ -159,6 +164,9 @@ module testbench;
         "arch32zbs":     if (P.ZBS_SUPPORTED)     tests = arch32zbs;
         "arch32zicboz":  if (P.ZICBOZ_SUPPORTED)  tests = arch32zicboz;
         "arch32zcb":     if (P.ZCB_SUPPORTED)     tests = arch32zcb;
+        "arch32zfh":     if (P.ZFH_SUPPORTED)     tests = arch32zfh;
+        "arch32zfaf":    if (P.ZFA_SUPPORTED)     tests = arch32zfaf;
+        "arch32zfad":    if (P.ZFA_SUPPORTED & P.D_SUPPORTED)  tests = arch32zfad;
       endcase
     end
     if (tests.size() == 0) begin
@@ -387,7 +395,14 @@ module testbench;
       end
     end
   end
- 
+
+  integer adrindex;
+  if (P.UNCORE_RAM_SUPPORTED)
+    always @(posedge clk) 
+      if (ResetMem)  // program memory is sometimes reset (e.g. for CoreMark, which needs zeroed memory)
+        for (adrindex=0; adrindex<(P.UNCORE_RAM_RANGE>>1+(P.XLEN/32)); adrindex = adrindex+1) 
+          dut.uncore.uncore.ram.ram.memory.RAM[adrindex] = '0;
+
   ////////////////////////////////////////////////////////////////////////////////
   // Actual hardware
   ////////////////////////////////////////////////////////////////////////////////
@@ -433,6 +448,15 @@ module testbench;
   always begin
     clk = 1; # 5; clk = 0; # 5;
   end
+
+  /*
+  // Print key info  each cycle for debugging
+  always @(posedge clk) begin 
+    #2;
+    $display("PCM: %x  InstrM: %x (%5s) WriteDataM: %x  IEUResultM: %x",
+         dut.core.PCM, dut.core.InstrM, InstrMName, dut.core.WriteDataM, dut.core.ieu.dp.IEUResultM);
+  end
+  */
 
   ////////////////////////////////////////////////////////////////////////////////
   // Support logic
@@ -496,49 +520,66 @@ module testbench;
     input logic   riscofTest;
     input integer begin_signature_addr;
     output integer errors;
+    int fd, code;
+    string line;
+    int siglines, sigentries;
 
     localparam SIGNATURESIZE = 5000000;
     integer        i;
     logic [31:0]   sig32[0:SIGNATURESIZE];
+    logic [31:0]   parsed;
     logic [P.XLEN-1:0] signature[0:SIGNATURESIZE];
     string            signame;
     logic [P.XLEN-1:0] testadr, testadrNoBase;
     
-    // for tests with no self checking mechanism, read .signature.output file and compare to check for errors
-    // clear signature to prevent contamination from previous tests
-    for(i=0; i<SIGNATURESIZE; i=i+1) begin
-      sig32[i] = 'bx;
-    end
+    // read .signature.output file and compare to check for errors
     if (riscofTest) signame = {pathname, TestName, "/ref/Reference-sail_c_simulator.signature"};
     else signame = {pathname, TestName, ".signature.output"};
-    // read signature, reformat in 64 bits if necessary
-    $readmemh(signame, sig32);
-    i = 0;
-    while (i < SIGNATURESIZE) begin
-      if (P.XLEN == 32) begin
-        signature[i] = sig32[i];
-        i = i+1;
-      end else begin
-        signature[i/2] = {sig32[i+1], sig32[i]};
-        i = i + 2;
+
+    // read signature file from memory and count lines.  Can't use readmemh because we need the line count
+    // $readmemh(signame, sig32);
+    fd = $fopen(signame, "r");
+    siglines = 0;
+    if (fd == 0) $display("Unable to read %s", signame);
+    else begin
+      while (!$feof(fd)) begin
+        code = $fgets(line, fd);
+        if (code != 0) begin
+          int errno;
+          string errstr;
+          errno = $ferror(fd, errstr);
+          if (errno != 0) $display("Error %d (code %d) reading line %d of %s: %s", errno, code, siglines, signame, errstr);
+          if (line.len() > 1) begin // skip blank lines
+            if ($sscanf(line, "%x", parsed) != 0) begin
+              sig32[siglines] = parsed;
+              siglines = siglines + 1; // increment if line is not blank
+            end
+          end
+        end
       end
-      if (i >= 4 & sig32[i-4] === 'bx) begin
-        if (i == 4) begin
-          i = SIGNATURESIZE+1; // flag empty file
-          $display("  Error: empty test file");
-        end else i = SIGNATURESIZE; // skip over the rest of the x's for efficiency
-      end
+      $fclose(fd);
+    end
+
+    // Check valid number of lines were read
+    if (siglines == 0) begin  
+      errors = 1; 
+      $display("Error: empty test file %s", signame);
+    end else if (P.XLEN == 64 & (siglines % 2)) begin
+      errors = 1;
+      $display("Error: RV64 signature has odd number of lines %s", signame);
+    end else errors = 0;
+
+    // copy lines into signature, converting to XLEN if necessary
+    sigentries = (P.XLEN == 32) ? siglines : siglines/2; // number of signature entries
+    for (i=0; i<sigentries; i++) begin
+      signature[i] = (P.XLEN == 32) ? sig32[i] : {sig32[i*2+1], sig32[i*2]};
+      //$display("XLEN = %d signature[%d] = %x", P.XLEN, i, signature[i]);
     end
 
     // Check errors
-    errors = (i == SIGNATURESIZE+1); // error if file is empty
-    i = 0;
     testadr = ($unsigned(begin_signature_addr))/(P.XLEN/8);
     testadrNoBase = (begin_signature_addr - P.UNCORE_RAM_BASE)/(P.XLEN/8);
-    /* verilator lint_off INFINITELOOP */
-    /* verilator lint_off WIDTHXZEXPAND */
-    while (signature[i] !== 'bx) begin
-      /* verilator lint_on WIDTHXZEXPAND */
+    for (i=0; i<sigentries; i++) begin
       logic [P.XLEN-1:0] sig;
       // **************************************
       // ***** BUG BUG BUG make sure RT undoes this.
@@ -552,21 +593,12 @@ module testbench;
         errors = errors+1;
         $display("  Error on test %s result %d: adr = %h sim (D$) %h sim (DTIM_SUPPORTED) = %h, signature = %h", 
 			     TestName, i, (testadr+i)*(P.XLEN/8), testbench.DCacheFlushFSM.ShadowRAM[testadr+i], sig, signature[i]);
-        //$display("  Error on test %s result %d: adr = %h sim (DTIM_SUPPORTED) = %h, signature = %h", 
-		//	     TestName, i, (testadr+i)*(P.XLEN/8), testbench.DCacheFlushFSM.ShadowRAM[testadr+i], signature[i]);        
-        $stop; //***debug
+        $stop;
       end
-      i = i + 1;
     end
-    /* verilator lint_on INFINITELOOP */
-    if (errors == 0) begin
-      $display("%s succeeded.  Brilliant!!!", TestName);
-    end else begin
-      $display("%s failed with %d errors. :(", TestName, errors);
-      //totalerrors = totalerrors+1;
-    end
-
-  endtask //
+    if (errors) $display("%s failed with %d errors. :(", TestName, errors);
+    else $display("%s succeeded.  Brilliant!!!", TestName);
+  endtask
   
   /* verilator lint_on WIDTHTRUNC */
   /* verilator lint_on WIDTHEXPAND */
@@ -588,7 +620,6 @@ task automatic updateProgramAddrLabelArray;
   ProgramAddrMapFP = $fopen(ProgramAddrMapFile, "r");
 
   if (ProgramLabelMapFP & ProgramAddrMapFP) begin // check we found both files
-    // *** RT: I'm a bit confused by the required initialization here.
     ProgramAddrLabelArray["begin_signature"] = 0;
     ProgramAddrLabelArray["tohost"] = 0;
     ProgramAddrLabelArray["sig_end_canary"] = 0;
@@ -601,8 +632,8 @@ task automatic updateProgramAddrLabelArray;
     end
   end
 
-  if(ProgramAddrLabelArray["begin"] == 0) $display("Couldn't find begin_signature in %s", ProgramLabelMapFile);
-  if(ProgramAddrLabelArray["sig_end_canary"] == 0) $display("Couldn't find sig_end_canary in %s", ProgramLabelMapFile);
+//  if(ProgramAddrLabelArray["begin_signature"] == 0) $display("Couldn't find begin_signature in %s", ProgramLabelMapFile);
+//  if(ProgramAddrLabelArray["sig_end_canary"] == 0) $display("Couldn't find sig_end_canary in %s", ProgramLabelMapFile);
 
   $fclose(ProgramLabelMapFP);
   $fclose(ProgramAddrMapFP);

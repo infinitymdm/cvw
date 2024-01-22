@@ -29,7 +29,7 @@
 
 module ahbinterface #(
   parameter XLEN,
-  parameter LSU = 0                                   // 1: LSU bus width is `XLEN, 0: IFU bus width is 32 bits
+  parameter logic LSU = 1'b0                                   // 1: LSU bus width is `XLEN, 0: IFU bus width is 32 bits
 )( 
   input  logic                          HCLK, HRESETn,
   // bus interface
@@ -44,17 +44,17 @@ module ahbinterface #(
   input  logic                          Stall,        // Core pipeline is stalled
   input  logic                          Flush,        // Pipeline stage flush. Prevents bus transaction from starting
   input  logic [1:0]                    BusRW,        // Memory operation read/write control: 10: read, 01: write
+  input  logic                          BusAtomic,    // Uncache atomic memory operation
   input  logic [XLEN/8-1:0]             ByteMask,     // Bytes enables within a word
   input  logic [XLEN-1:0]               WriteData,    // IEU write data for a store
   output logic                          BusStall,     // Bus is busy with an in flight memory operation
   output logic                          BusCommitted, // Bus is busy with an in flight memory operation and it is not safe to take an interrupt
-  output logic [(LSU ? XLEN : 32)-1:0]  FetchBuffer   // Register to hold HRDATA after arriving from the bus
+  output logic [XLEN-1:0]  FetchBuffer   // Register to hold HRDATA after arriving from the bus
 );
   
   logic                                 CaptureEn;
-  localparam                            LEN = (LSU ? XLEN : 32);   // 32 bits for IFU, XLEN for LSU
-  
-  flopen #(LEN) fb(.clk(HCLK), .en(CaptureEn), .d(HRDATA[LEN-1:0]), .q(FetchBuffer));
+
+  flopen #(XLEN) fb(.clk(HCLK), .en(CaptureEn), .d(HRDATA), .q(FetchBuffer));
 
   if(LSU) begin
     // delay HWDATA by 1 cycle per spec; assumes AHBW = XLEN    
@@ -65,7 +65,7 @@ module ahbinterface #(
     assign HWSTRB = '0;
   end    
 
-  busfsm busfsm(.HCLK, .HRESETn, .Flush, .BusRW,
+  busfsm #(~LSU) busfsm(.HCLK, .HRESETn, .Flush, .BusRW, .BusAtomic,
     .BusCommitted, .Stall, .BusStall, .CaptureEn, .HREADY,
     .HTRANS, .HWRITE);
 
