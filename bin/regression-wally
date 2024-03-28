@@ -448,7 +448,6 @@ def main():
     if '--makeTests' in sys.argv:
         os.chdir(regressionDir)
         os.system('./make-tests.sh | tee ./logs/make-tests.log')
-
     elif '--coverage' in sys.argv:
         TIMEOUT_DUR = 20*60 # seconds
         os.system('rm -f questa/cov/*.ucdb')
