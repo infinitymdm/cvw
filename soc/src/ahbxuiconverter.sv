@@ -2,6 +2,7 @@
 // ahbxuiconverter.sv
 //
 // Written: infinitymdm@gmail.com 29 February 2024
+// Modified: infinitymdm@gmail.com 02 April 2024
 //
 // Purpose: AHB to Xilinx UI converter
 // 
@@ -37,6 +38,7 @@ module ahbxuiconverter #(parameter ADDR_SIZE = 31,
   input  logic [DATA_SIZE/8-1:0] HWSTRB,
   input  logic                   HWRITE,
   input  logic [1:0]             HTRANS,
+  input  logic [2:0]             HBURST,
   input  logic                   HREADY,
   output logic [DATA_SIZE-1:0]   HRDATA,
   output logic                   HRESP,
@@ -46,7 +48,7 @@ module ahbxuiconverter #(parameter ADDR_SIZE = 31,
   output logic                   sys_reset,
   input  logic                   ui_clk, // from PLL
   input  logic                   ui_clk_sync_rst,
-  output logic [ADDR_SIZE-1:0]   app_addr, // Double check this width
+  output logic [ADDR_SIZE-1:0]   app_addr,
   output logic [2:0]             app_cmd,
   output logic                   app_en,
   input  logic                   app_rdy,
@@ -67,64 +69,105 @@ module ahbxuiconverter #(parameter ADDR_SIZE = 31,
   // a) selected, AND
   // b) a transfer is started, AND
   // c) the bus is ready
-  logic initTrans;
-  assign initTrans = HSEL & HTRANS[1] & HREADY;
-
-  // FIXME: Double check burst transactions. I think we don't handle HREADYOUT for those correctly
+  logic ui_enable;
+  assign ui_enable = HSEL & HREADY & HTRANS[1];
 
   // UI is ready for a command when initialized and ready to read and write
-  logic uiReady;
-  assign uiReady = app_rdy & app_wdf_rdy & init_calib_complete;
+  logic ui_ready;
+  assign ui_ready = app_rdy & app_wdf_rdy & init_calib_complete;
 
-  // Buffer the input down to ui_clk speed
-  logic [ADDR_SIZE-1:0]   addr;
-  logic [DATA_SIZE-1:0]   data;
-  logic [DATA_SIZE/8-1:0] mask;
-  logic                   cmdInit, cmdWrite;
-  logic                   cmdwfull, cmdrvalid;
-  logic enqueueCmd, dequeueCmd;
-  assign enqueueCmd = initTrans & ~cmdwfull;
-  assign dequeueCmd = uiReady & cmdrvalid;
-  // FIFO needs addr + (data + mask) + (enable + write)
+  // Delay AHB address phase signals to align with data phase so we can capture the whole transaction
+  logic [ADDR_SIZE-1:0]   ahb_addr;
+  logic [DATA_SIZE-1:0]   ahb_data;
+  logic [DATA_SIZE/8-1:0] ahb_strb;
+  logic                   ahb_wren;
+  logic [1:0]             ahb_burst;
+  flopen  #(ADDR_SIZE)   ahbaddrreg (HCLK, HREADY, HADDR, ahb_addr);
+  flopenr #(DATA_SIZE)   ahbdatareg (HCLK, ~HRESETn, HREADY, HWDATA, ahb_data);
+  flopenr #(DATA_SIZE/8) ahbstrbreg (HCLK, ~HRESETn, HREADY, HWSTRB, ahb_strb);
+  flopenr #(1)           ahbwrenreg (HCLK, ~HRESETn, HREADY, HWRITE, ahb_wren);
+  flopenr #(2)           ahbbrstreg (HCLK, ~HRESETn, HREADY, HBURST[2:1], ahb_burst);
+
+  // Capture transactions during data phase, once we have the address and data aligned
+  logic capture_trans;
+  flopr #(1) transreg (HCLK, ~HRESETn, ui_enable, capture_trans);
+
+  // Buffer input down to ui_clk speed
+  logic cmd_w_full, cmd_r_valid;
+  logic enqueue_cmd, dequeue_cmd;
+  logic inc_cmd_count, reset_cmd_count;
+  logic [2:0] cmd_count;
+  counter #(3) cmd_beat_counter (HCLK, reset_cmd_count | ~HRESETn, inc_cmd_count, cmd_count);
+  always_comb begin: cmd_burst_capture_logic
+    // Enqueue all single commands and 1st mod 8 commands in a burst read
+    inc_cmd_count = capture_trans & (|ahb_burst); // Increment each cycle during burst transactions
+    reset_cmd_count = ~|ahb_burst; // Reset  if transaction is not a burst
+    enqueue_cmd = capture_trans & ~cmd_w_full & (ahb_wren | (cmd_count == 3'b000)); // enqueue all writes and 1st mod 8 reads in a burst
+    dequeue_cmd = ui_ready & cmd_r_valid;
+  end
+  logic [ADDR_SIZE-1:0]   ui_addr;
+  logic [DATA_SIZE-1:0]   ui_data;
+  logic [DATA_SIZE/8-1:0] ui_mask;
+  logic                   ui_wren;
+  logic [1:0]             ui_burst; // respfifo should only enqueue 2^(ui_burst) beats of the response
+  // FIFO needs addr + (data + mask) + write + burst)
   bsg_async_fifo #(
-    .width_p(ADDR_SIZE + 9*DATA_SIZE/8 + 2),
-    .lg_size_p(16),
+    .width_p(ADDR_SIZE + 9*DATA_SIZE/8 + 1 + 2),
+    .lg_size_p(16), // TODO: Parameterize based on wally config
     .and_data_with_valid_p(1)
   ) cmdfifo (
-    .w_data_i({HADDR, HWDATA, HWSTRB, initTrans, HWRITE}),
-    .w_enq_i(enqueueCmd), .w_clk_i(HCLK), .w_reset_i(~HRESETn),
-    .r_deq_i(dequeueCmd), .r_clk_i(ui_clk), .r_reset_i(ui_clk_sync_rst),
-    .r_data_o({addr, data, mask, cmdInit, cmdWrite}),
-    .w_full_o(cmdwfull), .r_valid_o(cmdrvalid)
+    .w_data_i({ahb_addr, ahb_data, ~ahb_strb, ahb_wren, ahb_burst}),
+    .w_enq_i(enqueue_cmd), .w_clk_i(HCLK), .w_reset_i(~HRESETn),
+    .r_deq_i(dequeue_cmd), .r_clk_i(ui_clk), .r_reset_i(ui_clk_sync_rst),
+    .r_data_o({ui_addr, ui_data, ui_mask, ui_wren, ui_burst}),
+    .w_full_o(cmd_w_full), .r_valid_o(cmd_r_valid)
   );
 
-  // Delay transactions 1 clk so we can set wren on the cycle after write commands (when data arrives)
-  flopen  #(ADDR_SIZE)   addrreg  (ui_clk, uiReady, addr, app_addr);
-  flopenr #(3)           cmdreg   (ui_clk, ui_clk_sync_rst, uiReady, {2'b0, ~cmdWrite}, app_cmd);
-  flopenr #(1)           cmdenreg (ui_clk, ui_clk_sync_rst, uiReady, cmdInit, app_en);
-  flopenr #(1)           wrenreg  (ui_clk, ui_clk_sync_rst, uiReady, ~app_cmd[0], app_wdf_wren);
-  flopenr #(DATA_SIZE)   datareg  (ui_clk, ui_clk_sync_rst, uiReady, data, app_wdf_data);
-  flopenr #(DATA_SIZE/8) maskreg  (ui_clk, ui_clk_sync_rst, uiReady, mask, app_wdf_mask);
-  assign app_wdf_end = app_wdf_wren; // Since AHB will always put data on the bus after a write cmd, this is always valid
+  // Delay transactions 1 ui_clk so we can detect the end of a write and set app_wdf_end
+  logic [1:0] app_burst;
+  assign app_cmd = {2'b0, ~app_wdf_wren};
+  assign app_wdf_end = app_wdf_wren & ~({ui_addr, ui_wren} == {app_addr, app_wdf_wren});
+  flopen  #(ADDR_SIZE)   appaddrreg (ui_clk, ui_ready, ui_addr, app_addr);
+  flopenr #(1)           appenreg   (ui_clk, ui_clk_sync_rst, ui_ready, dequeue_cmd, app_en);
+  flopenr #(DATA_SIZE)   appdatareg (ui_clk, ui_clk_sync_rst, ui_ready, ui_data, app_wdf_data);
+  flopenr #(DATA_SIZE/8) appmaskreg (ui_clk, ui_clk_sync_rst, ui_ready, ui_mask, app_wdf_mask);
+  flopenr #(1)           appwrenreg (ui_clk, ui_clk_sync_rst, ui_ready, ui_wren, app_wdf_wren);
+  flopenr #(2)           appbrstreg (ui_clk, ui_clk_sync_rst, ui_ready, ui_burst, app_burst);
+
+  // Hold on to the number of response beats we want until the ui registers the next command (i.e the response is done)
+  logic [1:0] resp_burst;
+  flopenr #(2) respbrstreg (ui_clk, ui_clk_sync_rst, app_en, app_burst, resp_burst);
   
   // Return read data at HCLK speed
-  logic respwfull, resprvalid;
-  logic enqueueResp, dequeueResp;
-  assign enqueueResp = app_rd_data_valid & ~respwfull;
-  assign dequeueResp = HSEL & resprvalid;
+  logic resp_w_full, resp_r_valid;
+  logic enqueue_resp, dequeue_resp;
+  logic inc_resp_count, reset_resp_count;
+  logic [4:0] resp_count;
+  counter #(5) resp_beat_counter (ui_clk, reset_resp_count | ui_clk_sync_rst, inc_resp_count, resp_count);
+  always_comb begin: resp_burst_capture_logic
+    // Enqueue only the correct number of beats for each response
+    inc_resp_count = app_rd_data_valid; // Increment every time we get a beat of valid response data
+    reset_resp_count = app_en; // Reset when the UI gets a new transaction
+    enqueue_resp = app_rd_data_valid & ~resp_w_full & (|resp_burst ? (resp_count < (5'b10 << resp_burst)) : resp_count < 1); // Only enqueue 2^(resp_burst) beats of a burst read
+    dequeue_resp = HSEL & resp_r_valid;
+  end
   bsg_async_fifo #(
     .width_p(DATA_SIZE),
-    .lg_size_p(8),
+    .lg_size_p(16), // TODO: Parameterize based on wally config
     .and_data_with_valid_p(1)
   ) respfifo (
     .w_data_i(app_rd_data),
-    .w_enq_i(enqueueResp), .w_clk_i(ui_clk), .w_reset_i(ui_clk_sync_rst),
-    .r_deq_i(dequeueResp), .r_clk_i(HCLK), .r_reset_i(~HRESETn),
+    .w_enq_i(enqueue_resp), .w_clk_i(ui_clk), .w_reset_i(ui_clk_sync_rst),
+    .r_deq_i(dequeue_resp), .r_clk_i(HCLK), .r_reset_i(~HRESETn),
     .r_data_o(HRDATA),
-    .w_full_o(respwfull), .r_valid_o(resprvalid)
+    .w_full_o(resp_w_full), .r_valid_o(resp_r_valid)
   );
   
+  // If there are only writes in the pipeline, accept commands until the buffer is full
+  // If there is a read in the pipeline, stall until we have a valid response
+  logic read_in_progress;
+  assign read_in_progress = ~(ahb_wren | ui_wren | app_wdf_wren);
+  assign HREADYOUT = read_in_progress ? resp_r_valid : ~cmd_w_full;
   assign HRESP = 0; // do not indicate errors
-  assign HREADYOUT = uiReady & ~cmdwfull;
 
 endmodule
