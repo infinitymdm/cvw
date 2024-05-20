@@ -3170,7 +3170,7 @@ string arch32zfh_fma[] = '{
 
  string custom[] = '{
     `CUSTOM,
-    "lpddrtest",
+    "lpddr_test",
     "simple",
     "debug",
     "cacheTest"
