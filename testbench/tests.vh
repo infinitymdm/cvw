@@ -3170,9 +3170,10 @@ string arch32zfh_fma[] = '{
 
  string custom[] = '{
     `CUSTOM,
-    "simple",
-    "debug",
-    "cacheTest"
+    "lpddr_test"
+    // "simple",
+    // "debug",
+    // "cacheTest"
  };
 
  string soc[] = '{
