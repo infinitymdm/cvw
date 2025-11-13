@@ -1,0 +1,34 @@
+_default:
+    @just --list
+
+clean:
+    rm -rf verilator_build
+    rm -f yosys_*.log
+
+verilator-test:
+    verilator --binary --timing --trace-fst -Wno-lint \
+        --Mdir verilator_build \
+        -j `nproc` \
+        --top tb \
+        ../lzc.sv tb.sv lzc_prior.sv
+    cd verilator_build && ./Vtb && cd ..
+
+yosys-synth:
+    yosys -p 'prep -top lzc' ../lzc.sv | tee yosys_log_recursive.log
+    yosys -p 'prep -top lzc_prior' lzc_prior.sv | tee yosys_log_prior.log
+
+quartus-synth:
+    @echo "todo: synth with quartus prime lite"
+
+dc-synth:
+    @echo "todo: synth with design compiler"
+
+vivado-synth:
+    @echo "todo: synth with vivado"
+
+all-synth:
+    @just clean
+    @just yosys-synth
+    @just quartus-synth
+    @just dc-synth
+    @just vivado-synth
