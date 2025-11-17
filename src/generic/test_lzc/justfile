@@ -4,6 +4,7 @@ _default:
 clean:
     rm -rf verilator_build
     rm -f yosys_*.log
+    rm -f vivad*.{jou,log}
 
 verilator-test:
     verilator --binary --timing --trace-fst -Wno-lint \
@@ -14,8 +15,8 @@ verilator-test:
     cd verilator_build && ./Vtb && cd ..
 
 yosys-synth:
-    yosys -p 'prep -top lzc' ../lzc.sv | tee yosys_log_recursive.log
-    yosys -p 'prep -top lzc_prior' lzc_prior.sv | tee yosys_log_prior.log
+    yosys -p 'prep -top lzc' ../lzc.sv | tee yosys_recursive.log # Should succeed
+    yosys -p 'prep -top lzc_prior' lzc_prior.sv | tee yosys_prior.log # Should error
 
 quartus-synth:
     @echo "todo: synth with quartus prime lite"
@@ -24,7 +25,8 @@ dc-synth:
     @echo "todo: synth with design compiler"
 
 vivado-synth:
-    @echo "todo: synth with vivado"
+    vivado -mode batch -source vivado_recursive.tcl | tee vivado_recursive.log
+    vivado -mode batch -source vivado_prior.tcl | tee vivado_prior.log
 
 all-synth:
     @just clean
