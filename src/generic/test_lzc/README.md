@@ -17,10 +17,10 @@ available; otherwise, defaults are used.
 -- = not yet tested.
 
 
-| Synthesis Tool                     | Prior Design       | Recursive Design   |
-| ---------------------------------- | ------------------ | ------------------ |
-| yosys 0.59.1                       | :x:                | :white_check_mark: |
-| AMD Vivado 2024.2                  | :white_check_mark: | :white_check_mark: |
-| Synopsys Design Compiler X-2025.06 | --                 | --                 |
-| Intel Quartus Prime Lite 25.1      | --                 | --                 |
-| Cadence Genus 21.16                | --                 | --                 |
+| Synthesis Tool                     | Prior Design       | Recursive Design   | Test Procedure       |
+| ---------------------------------- | ------------------ | ------------------ | -------------------- |
+| yosys 0.59.1                       | :x:                | :white_check_mark: | `just yosys-synth`   |
+| AMD Vivado 2024.2                  | :white_check_mark: | :white_check_mark: | `just vivado-synth`  |
+| Synopsys Design Compiler X-2025.06 | --                 | --                 | `just dc-synth`      |
+| Intel Quartus Prime Lite 25.1      | --                 | --                 | `just quartus-synth` |
+| Cadence Genus 21.16                | --                 | --                 | `just genus-synth`   |
