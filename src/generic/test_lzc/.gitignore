@@ -1,2 +1,9 @@
-*.log
+logs
+
 *.jou
+*.log
+
+db
+incremental_db
+*.qsf
+*.qpf

@@ -6,6 +6,8 @@ clean:
     rm -rf logs
     rm -f *.log
     rm -f vivad*.jou
+    rm -rf db incremental_db
+    rm -f *.{qpf,qsf}
 
 verilator-test:
     verilator --binary --timing --trace-fst -Wno-lint \
@@ -15,23 +17,31 @@ verilator-test:
         ../lzc.sv tb.sv lzc_prior.sv
     cd verilator_build && ./Vtb && cd ..
 
-yosys-synth:
-    yosys -p 'prep -top lzc' ../lzc.sv | tee logs/yosys_recursive.log # Should succeed
-    yosys -p 'prep -top lzc_prior' lzc_prior.sv | tee logs/yosys_prior.log # Should error
+_synth-prep:
+    @mkdir -p logs
 
-quartus-synth:
-    @echo "todo: synth with quartus prime lite"
+yosys-synth: _synth-prep
+    yosys -p 'prep -top lzc' ../lzc.sv | tee logs/yosys_recursive.log
+    yosys -p 'prep -top lzc_prior' lzc_prior.sv | tee logs/yosys_prior.log # error expected
 
-dc-synth:
+quartus-synth: _synth-prep
+    quartus_sh -t quartus/quartus_recursive.tcl | tee logs/quartus_recursive.log
+    quartus_sh -t quartus/quartus_prior.tcl | tee logs/quartus_prior.log
+
+dc-synth: _synth-prep
     @echo "todo: synth with design compiler"
 
-vivado-synth:
+genus-synth: _synth-prep
+    @echo "todo: synth with genus"
+
+vivado-synth: _synth-prep
     vivado -mode batch -source vivado/vivado_recursive.tcl | tee logs/vivado_recursive.log
     vivado -mode batch -source vivado/vivado_prior.tcl | tee logs/vivado_prior.log
 
-all-synth:
+synth-all:
     @just clean
     @just yosys-synth
     @just quartus-synth
-    @just dc-synth
     @just vivado-synth
+    @just dc-synth
+    @just genus-synth

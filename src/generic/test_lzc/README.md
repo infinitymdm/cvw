@@ -22,5 +22,5 @@ available; otherwise, defaults are used.
 | yosys 0.59.1                       | :x:                | :white_check_mark: | `just yosys-synth`   |
 | AMD Vivado 2024.2                  | :white_check_mark: | :white_check_mark: | `just vivado-synth`  |
 | Synopsys Design Compiler X-2025.06 | --                 | --                 | `just dc-synth`      |
-| Intel Quartus Prime Lite 25.1      | --                 | --                 | `just quartus-synth` |
+| Intel Quartus Prime Lite 25.1      | :x:                | :white_check_mark: | `just quartus-synth` |
 | Cadence Genus 21.16                | --                 | --                 | `just genus-synth`   |
