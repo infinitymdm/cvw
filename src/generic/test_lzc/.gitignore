@@ -7,3 +7,10 @@ db
 incremental_db
 *.qsf
 *.qpf
+
+*.mr
+alib-52
+cksum_dir
+*.svf
+*.pvl
+*.syn

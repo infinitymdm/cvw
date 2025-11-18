@@ -4,10 +4,12 @@ _default:
 clean:
     rm -rf verilator_build
     rm -rf logs
-    rm -f *.log
-    rm -f vivad*.jou
+    rm -f vivad*.{jou,log}
     rm -rf db incremental_db
     rm -f *.{qpf,qsf}
+    rm -rf alib-52
+    rm -rf cksum_dir
+    rm -f *.{mr,svf,pvl,syn}
 
 verilator-test:
     verilator --binary --timing --trace-fst -Wno-lint \
@@ -26,10 +28,11 @@ yosys-synth: _synth-prep
 
 quartus-synth: _synth-prep
     quartus_sh -t quartus/quartus_recursive.tcl | tee logs/quartus_recursive.log
-    quartus_sh -t quartus/quartus_prior.tcl | tee logs/quartus_prior.log
+    quartus_sh -t quartus/quartus_prior.tcl | tee logs/quartus_prior.log # error expected
 
 dc-synth: _synth-prep
-    @echo "todo: synth with design compiler"
+    dc_shell-xg-t -f design_compiler/dc_recursive.tcl | tee logs/dc_recursive.log
+    dc_shell-xg-t -f design_compiler/dc_prior.tcl | tee logs/dc_prior.log
 
 genus-synth: _synth-prep
     @echo "todo: synth with genus"
