@@ -14,3 +14,6 @@ cksum_dir
 *.svf
 *.pvl
 *.syn
+
+genus.*
+*.tstamp

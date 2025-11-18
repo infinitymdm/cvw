@@ -10,6 +10,7 @@ clean:
     rm -rf alib-52
     rm -rf cksum_dir
     rm -f *.{mr,svf,pvl,syn}
+    rm -f genus.*
 
 verilator-test:
     verilator --binary --timing --trace-fst -Wno-lint \
@@ -35,7 +36,8 @@ dc-synth: _synth-prep
     dc_shell-xg-t -f design_compiler/dc_prior.tcl | tee logs/dc_prior.log
 
 genus-synth: _synth-prep
-    @echo "todo: synth with genus"
+    genus -f genus/genus_recursive.tcl | tee logs/genus_recursive.log
+    genus -f genus/genus_prior.tcl | tee logs/genus_prior.log
 
 vivado-synth: _synth-prep
     vivado -mode batch -source vivado/vivado_recursive.tcl | tee logs/vivado_recursive.log

@@ -23,4 +23,4 @@ available; otherwise, defaults are used.
 | AMD Vivado 2024.2                  | :white_check_mark: | :white_check_mark: | `just vivado-synth`  |
 | Synopsys Design Compiler X-2025.06 | :white_check_mark: | :white_check_mark: | `just dc-synth`      |
 | Intel Quartus Prime Lite 25.1      | :x:                | :white_check_mark: | `just quartus-synth` |
-| Cadence Genus 21.16                | --                 | --                 | `just genus-synth`   |
+| Cadence Genus 21.16                | :white_check_mark: | :white_check_mark: | `just genus-synth`   |
