@@ -10,11 +10,6 @@ The pull request motivating these experiments can be found here: https://github.
 Results are based on minimal synthesis procedures. Device-independent synthesis flows are used when
 available; otherwise, defaults are used.
 
-:x: = Synthesis fails with an error.
-
-:white_check_mark: = Synthesis succeeds.
-
--- = not yet tested.
 
 
 | Synthesis Tool                     | Prior Design       | Recursive Design   | Test Procedure       |
@@ -24,3 +19,6 @@ available; otherwise, defaults are used.
 | Synopsys Design Compiler X-2025.06 | :white_check_mark: | :white_check_mark: | `just dc-synth`      |
 | Intel Quartus Prime Lite 25.1      | :x:                | :white_check_mark: | `just quartus-synth` |
 | Cadence Genus 21.16                | :white_check_mark: | :white_check_mark: | `just genus-synth`   |
+
+- :x: = Synthesis fails with an error.
+- :white_check_mark: = Synthesis succeeds.
