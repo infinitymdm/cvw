@@ -7,6 +7,7 @@ clean:
     rm -f vivad*.{jou,log}
     rm -rf db incremental_db
     rm -f *.{qpf,qsf}
+    rm -rf quartus/outputs_*
     rm -rf alib-52
     rm -rf cksum_dir
     rm -f *.{mr,svf,pvl,syn}
@@ -36,9 +37,9 @@ yosys-synth: _synth-prep
     yosys -p 'prep -top lzc_prior' lzc_prior.sv 2>&1 | tee logs/prior/yosys.log # error expected
 
 quartus-synth: _synth-prep
-    quartus_sh -t quartus/quartus_recursive_opt.tcl 2>&1 | tee logs/recursive_opt/quartus.log
-    quartus_sh -t quartus/quartus_recursive_unopt.tcl 2>&1 | tee logs/recursive_unopt/quartus.log
-    quartus_sh -t quartus/quartus_prior.tcl 2>&1 | tee logs/prior/quartus.log # error expected
+    quartus_sta -t quartus/quartus_recursive_opt.tcl 2>&1 | tee logs/recursive_opt/quartus.log
+    quartus_sta -t quartus/quartus_recursive_unopt.tcl 2>&1 | tee logs/recursive_unopt/quartus.log
+    quartus_sta -t quartus/quartus_prior.tcl 2>&1 | tee logs/prior/quartus.log # error expected
 
 dc-synth: _synth-prep
     dc_shell-xg-t -f design_compiler/dc_recursive.tcl | tee logs/dc_recursive.log
