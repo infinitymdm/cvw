@@ -12,24 +12,33 @@ clean:
     rm -f *.{mr,svf,pvl,syn}
     rm -f genus.*
 
-verilator-test:
-    verilator --binary --timing --trace-fst -Wno-lint \
+verilator-test VLEN_MAX:
+    @for i in {1..{{VLEN_MAX}}}; do \
+        just verilator-run $i; \
+    done
+
+verilator-run VLEN:
+    verilator --quiet --binary --timing --trace-fst -Wno-lint \
+        -MAKEFLAGS "--silent" \
         --Mdir verilator_build \
         -j `nproc` \
         --top tb \
+        -DVLEN={{VLEN}} \
         ../lzc.sv lzc_unopt.sv tb.sv lzc_prior.sv
-    cd verilator_build && ./Vtb && cd ..
+    cd verilator_build && ./Vtb +verilator+quiet && cd ..
 
 _synth-prep:
-    @mkdir -p logs
+    @mkdir -p logs/{recursive_opt,recursive_unopt,prior}
 
 yosys-synth: _synth-prep
-    yosys -p 'prep -top lzc' ../lzc.sv | tee logs/yosys_recursive.log
-    yosys -p 'prep -top lzc_prior' lzc_prior.sv | tee logs/yosys_prior.log # error expected
+    yosys -p 'prep -top lzc' ../lzc.sv 2>&1 | tee logs/recursive_opt/yosys.log
+    yosys -p 'prep -top lzc_unopt' lzc_unopt.sv 2>&1 | tee logs/recursive_unopt/yosys.log
+    yosys -p 'prep -top lzc_prior' lzc_prior.sv 2>&1 | tee logs/prior/yosys.log # error expected
 
 quartus-synth: _synth-prep
-    quartus_sh -t quartus/quartus_recursive.tcl | tee logs/quartus_recursive.log
-    quartus_sh -t quartus/quartus_prior.tcl | tee logs/quartus_prior.log # error expected
+    quartus_sh -t quartus/quartus_recursive_opt.tcl 2>&1 | tee logs/recursive_opt/quartus.log
+    quartus_sh -t quartus/quartus_recursive_unopt.tcl 2>&1 | tee logs/recursive_unopt/quartus.log
+    quartus_sh -t quartus/quartus_prior.tcl 2>&1 | tee logs/prior/quartus.log # error expected
 
 dc-synth: _synth-prep
     dc_shell-xg-t -f design_compiler/dc_recursive.tcl | tee logs/dc_recursive.log
