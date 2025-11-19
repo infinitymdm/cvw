@@ -17,7 +17,7 @@ verilator-test:
         --Mdir verilator_build \
         -j `nproc` \
         --top tb \
-        ../lzc.sv tb.sv lzc_prior.sv
+        ../lzc.sv lzc_unopt.sv tb.sv lzc_prior.sv
     cd verilator_build && ./Vtb && cd ..
 
 _synth-prep:
