@@ -1,6 +1,6 @@
 verilator_build
 
-vivad*.*
+/vivad*.{jou,log}
 
 db
 incremental_db

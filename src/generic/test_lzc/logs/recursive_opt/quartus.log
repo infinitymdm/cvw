@@ -1,0 +1,366 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Wed Nov 19 13:47:43 2025
+Info: Command: quartus_sta -t quartus/quartus_recursive_opt.tcl
+Info (125061): Changed top-level design entity name to "lzc"
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Nov 19 13:47:44 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt --analysis_and_elaboration
+Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/marcus/software/cvw/src/generic/lzc.sv
+    Info (12023): Found entity 1: lzc File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 27
+Info (12127): Elaborating entity "lzc" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (5) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (5) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (4) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (3) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz|lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (2) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz|lzc:l_lcz|lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10036): Verilog HDL or VHDL warning at lzc.sv(36): object "LNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 36
+Warning (10036): Verilog HDL or VHDL warning at lzc.sv(37): object "RNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 37
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:r_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (3) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:r_lcz|lzc:r_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (2) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 4. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 4. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 710 megabytes
+    Info: Processing ended: Wed Nov 19 13:47:47 2025
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:10
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Nov 19 13:47:48 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
+Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /home/marcus/software/cvw/src/generic/lzc.sv
+    Info (12023): Found entity 1: lzc File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 27
+Info (12127): Elaborating entity "lzc" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (5) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (5) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (4) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (3) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz|lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (2) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:l_lcz|lzc:l_lcz|lzc:l_lcz|lzc:l_lcz|lzc:l_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (10036): Verilog HDL or VHDL warning at lzc.sv(36): object "LNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 36
+Warning (10036): Verilog HDL or VHDL warning at lzc.sv(37): object "RNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 37
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:r_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (3) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Info (12128): Elaborating entity "lzc" for hierarchy "lzc:r_lcz|lzc:r_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (2) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 4. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 4. The formal width of the signal in the module is 3.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
+Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 48
+Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 53 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 6 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 470 megabytes
+    Info: Processing ended: Wed Nov 19 13:47:52 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:11
+Info: *******************************************************************
+Info: Running Quartus Prime Fitter
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Nov 19 13:47:53 2025
+Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
+Info: qfit2_default_script.tcl version: #1
+Info: Project  = lzc_recursive_opt
+Info: Revision = lzc_recursive_opt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
+Info (119006): Selected device 5CGXFC7C7F23C8 for design "lzc_recursive_opt"
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Critical Warning (169085): No exact pin location assignment(s) for 29 pins of 29 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Info (184020): Starting Fitter periphery placement operations
+Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
+Info (176233): Starting register packing
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:04
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lzc_recursive_opt.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (170189): Fitter placement preparation operations beginning
+Info (14951): The Fitter is using Advanced Physical Optimization.
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 0% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X56_Y0 to location X66_Y10
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 2813 megabytes
+    Info: Processing ended: Wed Nov 19 13:48:07 2025
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:46
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Nov 19 13:48:08 2025
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 505 megabytes
+    Info: Processing ended: Wed Nov 19 13:48:12 2025
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+Info (293026): Skipped module Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Nov 19 13:48:13 2025
+Info: Command: quartus_sta lzc_recursive_opt -c lzc_recursive_opt
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lzc_recursive_opt.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow 1100mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info: Analyzing Fast 1100mV 0C Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 996 megabytes
+    Info: Processing ended: Wed Nov 19 13:48:15 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 54 warnings
+Critical Warning (332199): Ignored -post_map option. The Timing Analyzer does not allow timing analysis of the post-synthesis netlist after you run the Fitter.
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332115): Report Timing: No setup paths were found
+    Info (332115): -setup
+    Info (332115): -npaths 100
+    Info (332115): -detail full_path
+    Info (332115): -stdout
+Info (332106): Check Timing:
+Info (332106): Virtual Clock
+    Info (332106): 	No virtual clock was found.	
+Info (332106): No Input Delay
+    Info (332106): num[0]	No input delay was set on input port.	
+    Info (332106): num[3]	No input delay was set on input port.	
+    Info (332106): num[4]	No input delay was set on input port.	
+    Info (332106): num[1]	No input delay was set on input port.	
+    Info (332106): num[2]	No input delay was set on input port.	
+    Info (332106): num[6]	No input delay was set on input port.	
+    Info (332106): num[8]	No input delay was set on input port.	
+    Info (332106): num[7]	No input delay was set on input port.	
+    Info (332106): num[5]	No input delay was set on input port.	
+    Info (332106): num[9]	No input delay was set on input port.	
+    Info (332106): num[10]	No input delay was set on input port.	
+    Info (332106): num[12]	No input delay was set on input port.	
+    Info (332106): num[11]	No input delay was set on input port.	
+    Info (332106): num[13]	No input delay was set on input port.	
+    Info (332106): num[17]	No input delay was set on input port.	
+    Info (332106): num[14]	No input delay was set on input port.	
+    Info (332106): num[16]	No input delay was set on input port.	
+    Info (332106): num[15]	No input delay was set on input port.	
+    Info (332106): num[22]	No input delay was set on input port.	
+    Info (332106): num[19]	No input delay was set on input port.	
+    Info (332106): num[20]	No input delay was set on input port.	
+    Info (332106): num[18]	No input delay was set on input port.	
+    Info (332106): num[21]	No input delay was set on input port.	
+Info (332106): No Output Delay
+    Info (332106): ZeroCnt[0]	No output delay was set on output port.	
+    Info (332106): ZeroCnt[1]	No output delay was set on output port.	
+    Info (332106): ZeroCnt[2]	No output delay was set on output port.	
+    Info (332106): ZeroCnt[3]	No output delay was set on output port.	
+    Info (332106): ZeroCnt[4]	No output delay was set on output port.	
+    Info (332106): AllZeros	No output delay was set on output port.	
+Info (332106): Summary
+    Info (332106): no_clock	0	
+    Info (332106): multiple_clock	0	
+    Info (332106): pos_neg_clock_domain	0	
+    Info (332106): generated_clock	0	
+    Info (332106): virtual_clock	1	
+    Info (332106): no_input_delay	23	
+    Info (332106): no_output_delay	6	
+    Info (332106): partial_input_delay	0	
+    Info (332106): partial_output_delay	0	
+    Info (332106): io_min_max_delay_consistency	0	
+    Info (332106): reference_pin	0	
+    Info (332106): generated_io_delay	0	
+    Info (332106): latency_override	0	
+    Info (332106): partial_multicycle	0	
+    Info (332106): multicycle_consistency	0	
+    Info (332106): loops	0	
+    Info (332106): latches	0	
+    Info (332106): pll_cross_check	0	
+    Info (332106): uncertainty	0	
+    Info (332106): partial_min_max_delay	0	
+    Info (332106): clock_assignments_on_output_ports	0	
+    Info (332106): input_delay_assigned_to_clock	0	
+Info (23030): Evaluation of Tcl script quartus/quartus_recursive_opt.tcl was successful
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 642 megabytes
+    Info: Processing ended: Wed Nov 19 13:48:16 2025
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:01:16

@@ -1,0 +1,50 @@
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Copyright (C) 2025  Altera Corporation. All rights reserved.
+    Info: Your use of Altera Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Altera Program License 
+    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
+    Info: the Altera IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Altera and sold by Altera or its authorized distributors.  Please
+    Info: refer to the Altera Software License Subscription Agreements 
+    Info: on the Quartus Prime software download page.
+    Info: Processing started: Wed Nov 19 13:48:51 2025
+Info: Command: quartus_sta -t quartus/quartus_prior.tcl
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+    Info: Processing started: Wed Nov 19 13:48:51 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_prior -c lzc_prior --analysis_and_elaboration
+Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file lzc_prior.sv
+    Info (12023): Found entity 1: lzc_prior File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_prior.sv Line: 1
+Info (12127): Elaborating entity "lzc_prior" for the top level hierarchy
+Error (10232): Verilog HDL error at lzc_prior.sv(10): index -1 cannot fall outside the declared range [22:0] for vector "num" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_prior.sv Line: 10
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 2 errors, 1 warning
+    Error: Peak virtual memory: 710 megabytes
+    Error: Processing ended: Wed Nov 19 13:48:54 2025
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:10
+------------------------------------------------
+ERROR: You must open a project before you can use this command.
+
+    while executing
+"project_close"
+    (file "quartus/quartus_prior.tcl" line 16)
+------------------------------------------------
+Error (23031): Evaluation of Tcl script quartus/quartus_prior.tcl unsuccessful
+Error: Quartus Prime Timing Analyzer was unsuccessful. 8 errors, 1 warning
+    Error: Peak virtual memory: 304 megabytes
+    Error: Processing ended: Wed Nov 19 13:48:55 2025
+    Error: Elapsed time: 00:00:04
+    Error: Total CPU time (on all processors): 00:00:11

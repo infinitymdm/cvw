@@ -1,0 +1,618 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2025  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.59+0 (git sha1 26b51148a, clang++ 19.1.6 -mtune=generic -march=x86-64 -O2 -fPIC -fno-plt -fstack-protector-strong -fasynchronous-unwind-tables -ftree-vectorize -feliminate-unused-debug-types -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -O3 -flto=thin)
+
+-- Parsing `../lzc.sv' using frontend ` -sv' --
+
+1. Executing Verilog-2005 frontend: ../lzc.sv
+Parsing SystemVerilog input from `../lzc.sv' to AST representation.
+verilog frontend filename ../lzc.sv
+Storing AST representation for module `$abstract\lzc'.
+Successfully finished Verilog frontend.
+
+-- Running command `prep -top lzc' --
+
+2. Executing PREP pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Generating RTLIL representation for module `\lzc'.
+
+2.2.1. Analyzing design hierarchy..
+Top module:  \lzc
+Parameter 1 (\WIDTH) = 7
+
+2.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 7
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000111'.
+Parameter 1 (\WIDTH) = 16
+
+2.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 16
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000010000'.
+
+2.2.4. Analyzing design hierarchy..
+Top module:  \lzc
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+Parameter 1 (\WIDTH) = 3
+
+2.2.5. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 3
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000011'.
+Parameter 1 (\WIDTH) = 4
+
+2.2.6. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 4
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 8
+
+2.2.7. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 8
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000001000'.
+Parameter 1 (\WIDTH) = 8
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000001000'.
+
+2.2.8. Analyzing design hierarchy..
+Top module:  \lzc
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000011
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000001000
+Parameter 1 (\WIDTH) = 1
+
+2.2.9. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 1
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000001'.
+Parameter 1 (\WIDTH) = 2
+
+2.2.10. Executing AST frontend in derive mode using pre-parsed AST for module `\lzc'.
+Parameter 1 (\WIDTH) = 2
+Generating RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000010'.
+Parameter 1 (\WIDTH) = 2
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000010'.
+Parameter 1 (\WIDTH) = 2
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000010'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000100'.
+Parameter 1 (\WIDTH) = 4
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000100'.
+
+2.2.11. Analyzing design hierarchy..
+Top module:  \lzc
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000011
+Used module:             $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+Used module:             $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000001000
+Parameter 1 (\WIDTH) = 1
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000001'.
+Parameter 1 (\WIDTH) = 1
+Found cached RTLIL representation for module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000001'.
+
+2.2.12. Analyzing design hierarchy..
+Top module:  \lzc
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000011
+Used module:             $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+Used module:             $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000001000
+
+2.2.13. Analyzing design hierarchy..
+Top module:  \lzc
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000011
+Used module:             $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+Used module:             $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+Used module:     $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+Used module:         $paramod\lzc\WIDTH=s32'00000000000000000000000000001000
+Removing unused module `$abstract\lzc'.
+Removed 1 unused modules.
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000100).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000100).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000010).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000010).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000001).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000010).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000001000).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000011).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000100).
+Mapping positional arguments of cell lzc.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000111).
+Mapping positional arguments of cell lzc.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000010000).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.genblk1.r_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000001).
+Mapping positional arguments of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.genblk1.l_lcz ($paramod\lzc\WIDTH=s32'00000000000000000000000000000001).
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.genblk1.r_lcz.ZeroCnt from 4 bits to 3 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.genblk1.l_lcz.ZeroCnt from 4 bits to 3 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.genblk1.r_lcz.ZeroCnt from 3 bits to 2 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.genblk1.l_lcz.ZeroCnt from 3 bits to 2 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.genblk1.r_lcz.ZeroCnt from 2 bits to 1 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.genblk1.l_lcz.ZeroCnt from 3 bits to 2 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.genblk1.r_lcz.ZeroCnt from 5 bits to 4 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.genblk1.l_lcz.ZeroCnt from 5 bits to 4 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.genblk1.r_lcz.ZeroCnt from 3 bits to 2 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.genblk1.l_lcz.ZeroCnt from 4 bits to 3 bits.
+Warning: Resizing cell port lzc.genblk1.r_lcz.ZeroCnt from 4 bits to 3 bits.
+Warning: Resizing cell port lzc.genblk1.l_lcz.ZeroCnt from 6 bits to 5 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.genblk1.r_lcz.ZeroCnt from 2 bits to 1 bits.
+Warning: Resizing cell port $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.genblk1.l_lcz.ZeroCnt from 2 bits to 1 bits.
+
+2.3. Executing PROC pass (convert processes to netlists).
+
+2.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.3.4. Executing PROC_INIT pass (extract init attributes).
+
+2.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.
+Optimizing module lzc.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.
+
+2.4. Executing FUTURE pass.
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.
+Optimizing module lzc.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111..
+Finding unused cells or wires in module \lzc..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010..
+Removed 0 unused cells and 20 unused wires.
+<suppressed ~19 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000...
+Checking module lzc...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.
+Optimizing module lzc.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000001'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000010'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000011'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000100'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000111'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000010000'.
+Finding identical cells in module `\lzc'.
+Removed a total of 1 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \lzc..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~14 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001.
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.
+  Optimizing cells in module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.
+  Optimizing cells in module \lzc.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000001'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000010'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000011'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000100'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000111'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000010000'.
+Finding identical cells in module `\lzc'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000..
+Finding unused cells or wires in module \lzc..
+
+2.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.
+Optimizing module lzc.
+
+2.8.8. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 31 bits (of 32) from port A of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.$add$../lzc.sv:50$27 ($add).
+Removed top 1 bits (of 2) from port B of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.$add$../lzc.sv:50$27 ($add).
+Removed top 30 bits (of 32) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.$add$../lzc.sv:50$27 ($add).
+Removed top 30 bits (of 32) from mux cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.$ternary$../lzc.sv:50$29 ($mux).
+Removed top 30 bits (of 32) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.$add$../lzc.sv:50$27_Y.
+Removed top 1 bits (of 2) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.LCnt.
+Removed top 30 bits (of 32) from port A of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.$add$../lzc.sv:50$13 ($add).
+Removed top 1 bits (of 2) from port B of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.$add$../lzc.sv:50$13 ($add).
+Removed top 29 bits (of 32) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.$add$../lzc.sv:50$13 ($add).
+Removed top 30 bits (of 32) from mux cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.$ternary$../lzc.sv:50$15 ($mux).
+Removed top 1 bits (of 3) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.$add$../lzc.sv:50$13 ($add).
+Removed top 30 bits (of 32) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.$add$../lzc.sv:50$13_Y.
+Removed top 1 bits (of 3) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.LCnt.
+Removed top 30 bits (of 32) from port A of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.$add$../lzc.sv:50$17 ($add).
+Removed top 1 bits (of 3) from port B of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.$add$../lzc.sv:50$17 ($add).
+Removed top 29 bits (of 32) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.$add$../lzc.sv:50$17 ($add).
+Removed top 29 bits (of 32) from mux cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.$ternary$../lzc.sv:50$19 ($mux).
+Removed top 29 bits (of 32) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.$add$../lzc.sv:50$17_Y.
+Removed top 1 bits (of 3) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.LCnt.
+Removed top 29 bits (of 32) from port A of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.$add$../lzc.sv:50$5 ($add).
+Removed top 1 bits (of 3) from port B of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.$add$../lzc.sv:50$5 ($add).
+Removed top 28 bits (of 32) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.$add$../lzc.sv:50$5 ($add).
+Removed top 29 bits (of 32) from mux cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.$ternary$../lzc.sv:50$7 ($mux).
+Removed top 1 bits (of 4) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.$add$../lzc.sv:50$5 ($add).
+Removed top 29 bits (of 32) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.$add$../lzc.sv:50$5_Y.
+Removed top 1 bits (of 4) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.LCnt.
+Removed top 29 bits (of 32) from port A of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.$add$../lzc.sv:50$21 ($add).
+Removed top 1 bits (of 4) from port B of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.$add$../lzc.sv:50$21 ($add).
+Removed top 28 bits (of 32) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.$add$../lzc.sv:50$21 ($add).
+Removed top 28 bits (of 32) from mux cell $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.$ternary$../lzc.sv:50$23 ($mux).
+Removed top 28 bits (of 32) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.$add$../lzc.sv:50$21_Y.
+Removed top 1 bits (of 4) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.LCnt.
+Removed top 1 bits (of 4) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.RCnt.
+Removed top 28 bits (of 32) from port A of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.$add$../lzc.sv:50$9 ($add).
+Removed top 1 bits (of 5) from port B of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.$add$../lzc.sv:50$9 ($add).
+Removed top 27 bits (of 32) from port Y of cell $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.$add$../lzc.sv:50$9 ($add).
+Removed top 27 bits (of 32) from mux cell $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.$ternary$../lzc.sv:50$11 ($mux).
+Removed top 27 bits (of 32) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.$add$../lzc.sv:50$9_Y.
+Removed top 1 bits (of 5) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.LCnt.
+Removed top 1 bits (of 5) from wire $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.RCnt.
+Removed top 27 bits (of 32) from port A of cell lzc.$add$../lzc.sv:50$1 ($add).
+Removed top 1 bits (of 4) from port B of cell lzc.$add$../lzc.sv:50$1 ($add).
+Removed top 26 bits (of 32) from port Y of cell lzc.$add$../lzc.sv:50$1 ($add).
+Removed top 27 bits (of 32) from mux cell lzc.$ternary$../lzc.sv:50$3 ($mux).
+Removed top 1 bits (of 6) from port Y of cell lzc.$add$../lzc.sv:50$1 ($add).
+Removed top 27 bits (of 32) from wire lzc.$add$../lzc.sv:50$1_Y.
+Removed top 1 bits (of 6) from wire lzc.LCnt.
+Removed top 1 bits (of 4) from wire lzc.RCnt.
+
+2.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000..
+Finding unused cells or wires in module \lzc..
+Removed 0 unused cells and 24 unused wires.
+<suppressed ~7 debug messages>
+
+2.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.12. Executing OPT pass (performing simple optimizations).
+
+2.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000.
+Optimizing module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000.
+Optimizing module lzc.
+
+2.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000001'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000010'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000011'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000100'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000000111'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000001000'.
+Finding identical cells in module `$paramod\lzc\WIDTH=s32'00000000000000000000000000010000'.
+Finding identical cells in module `\lzc'.
+Removed a total of 0 cells.
+
+2.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000..
+Finding unused cells or wires in module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000..
+Finding unused cells or wires in module \lzc..
+
+2.12.4. Finished fast OPT passes.
+
+2.13. Printing statistics.
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000000001 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        5 wires
+        6 wire bits
+        5 public wires
+        6 public wire bits
+        3 ports
+        3 port bits
+        1 cells
+        1   $not
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000000010 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       14 wire bits
+        9 public wires
+       12 public wire bits
+        3 ports
+        5 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        2   $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000000011 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       17 wire bits
+        9 public wires
+       15 public wire bits
+        3 ports
+        6 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000000100 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       22 wire bits
+        9 public wires
+       19 public wire bits
+        3 ports
+        8 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        2   $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000000111 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       29 wire bits
+        9 public wires
+       26 public wire bits
+        3 ports
+       11 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000000011
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000001000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       33 wire bits
+        9 public wires
+       29 public wire bits
+        3 ports
+       13 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        2   $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+
+=== $paramod\lzc\WIDTH=s32'00000000000000000000000000010000 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       53 wire bits
+        9 public wires
+       48 public wire bits
+        3 ports
+       22 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        2   $paramod\lzc\WIDTH=s32'00000000000000000000000000001000
+
+=== lzc ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       10 wires
+       67 wire bits
+        9 public wires
+       62 public wire bits
+        3 ports
+       29 port bits
+        3 cells
+        1   $add
+        1   $and
+        1   $mux
+        2 submodules
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       89 lzc
+        3 $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+        3   $paramod\lzc\WIDTH=s32'00000000000000000000000000000011
+        1     $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+        3     $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+        1       $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+        3   $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+        3     $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+        1       $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+        3 $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+        3   $paramod\lzc\WIDTH=s32'00000000000000000000000000001000
+        3     $paramod\lzc\WIDTH=s32'00000000000000000000000000000100
+        3       $paramod\lzc\WIDTH=s32'00000000000000000000000000000010
+        1         $paramod\lzc\WIDTH=s32'00000000000000000000000000000001
+
+        +----------Count including submodules.
+        | 
+      335 wires
+      634 wire bits
+      313 public wires
+      574 public wire bits
+      135 ports
+      258 port bits
+        - memories
+        - memory bits
+        - processes
+       89 cells
+       22   $add
+       22   $and
+       22   $mux
+       23   $not
+        2 submodules
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000000111
+        1   $paramod\lzc\WIDTH=s32'00000000000000000000000000010000
+
+2.14. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000001...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000010...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000011...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000100...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000000111...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000001000...
+Checking module $paramod\lzc\WIDTH=s32'00000000000000000000000000010000...
+Checking module lzc...
+Found and reported 0 problems.
+
+Warnings: 14 unique messages, 14 total
+End of script. Logfile hash: 735cb50806, CPU: user 0.02s system 0.01s, MEM: 29.02 MB peak
+Yosys 0.59+0 (git sha1 26b51148a, clang++ 19.1.6 -mtune=generic -march=x86-64 -O2 -fPIC -fno-plt -fstack-protector-strong -fasynchronous-unwind-tables -ftree-vectorize -feliminate-unused-debug-types -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -O3 -flto=thin)
+Time spent: 28% 5x opt_expr (0 sec), 17% 3x opt_merge (0 sec), ...
