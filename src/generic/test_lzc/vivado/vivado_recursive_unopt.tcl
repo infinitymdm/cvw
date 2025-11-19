@@ -1,5 +1,5 @@
-read_verilog lzc_prior.sv
-synth_design -top lzc_prior
+read_verilog lzc_unopt.sv
+synth_design -top lzc_unopt
 opt_design
 report_utilization
 report_timing

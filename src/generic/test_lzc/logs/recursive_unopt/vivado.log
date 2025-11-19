@@ -1,0 +1,763 @@
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Wed Nov 19 14:08:12 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source vivado/vivado_recursive_unopt.tcl
+# read_verilog lzc_unopt.sv
+# synth_design -top lzc_unopt
+Command: synth_design -top lzc_unopt
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 65956
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1761.910 ; gain = 369.855 ; free physical = 114632 ; free virtual = 131086
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized0' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized1' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized2' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized3' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized4' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized4' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (2) of port connection 'ZeroCnt' does not match port width (1) of module 'lzc_unopt__parameterized4' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+WARNING: [Synth 8-689] width (2) of port connection 'ZeroCnt' does not match port width (1) of module 'lzc_unopt__parameterized4' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized3' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc_unopt__parameterized3' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+WARNING: [Synth 8-689] width (2) of port connection 'ZeroCnt' does not match port width (1) of module 'lzc_unopt__parameterized4' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized2' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc_unopt__parameterized2' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc_unopt__parameterized2' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized1' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc_unopt__parameterized1' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc_unopt__parameterized1' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized0' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (5) of port connection 'ZeroCnt' does not match port width (4) of module 'lzc_unopt__parameterized0' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized5' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 11 - type: integer 
+WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc_unopt__parameterized1' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+INFO: [Synth 8-6157] synthesizing module 'lzc_unopt__parameterized6' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+	Parameter WIDTH bound to: 5 - type: integer 
+WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc_unopt__parameterized2' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:19]
+WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc_unopt__parameterized3' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized6' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc_unopt__parameterized6' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt__parameterized5' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+WARNING: [Synth 8-689] width (5) of port connection 'ZeroCnt' does not match port width (4) of module 'lzc_unopt__parameterized5' [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'lzc_unopt' (0#1) [/home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv:1]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1832.848 ; gain = 440.793 ; free physical = 114555 ; free virtual = 131010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1850.660 ; gain = 458.605 ; free physical = 114546 ; free virtual = 131000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1866.664 ; gain = 474.609 ; free physical = 114545 ; free virtual = 131000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1875.570 ; gain = 483.516 ; free physical = 114536 ; free virtual = 130991
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 15    
++---Muxes : 
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1990.438 ; gain = 598.383 ; free physical = 114389 ; free virtual = 130848
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1990.438 ; gain = 598.383 ; free physical = 114389 ; free virtual = 130848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1990.438 ; gain = 598.383 ; free physical = 114389 ; free virtual = 130848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114256 ; free virtual = 130715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114256 ; free virtual = 130715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114256 ; free virtual = 130715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114256 ; free virtual = 130715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114256 ; free virtual = 130715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114257 ; free virtual = 130716
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     3|
+|2     |LUT4 |     6|
+|3     |LUT5 |     2|
+|4     |LUT6 |    13|
+|5     |IBUF |    23|
+|6     |OBUF |     5|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    52|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114257 ; free virtual = 130716
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.250 ; gain = 735.195 ; free physical = 114257 ; free virtual = 130716
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 735.195 ; free physical = 114257 ; free virtual = 130716
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2144.094 ; gain = 0.000 ; free physical = 114361 ; free virtual = 130820
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2346.715 ; gain = 0.000 ; free physical = 114281 ; free virtual = 130739
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 5391f98b
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 2346.715 ; gain = 954.668 ; free physical = 114280 ; free virtual = 130739
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1748.755; main = 1748.755; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2346.719; main = 2346.719; forked = 0.000
+# opt_design
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00.71 ; elapsed = 00:00:00.26 . Memory (MB): peak = 2489.590 ; gain = 142.875 ; free physical = 114265 ; free virtual = 130723
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2737.598 ; gain = 248.008 ; free physical = 114089 ; free virtual = 130548
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+Phase 1 Initialization | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+Phase 2 Timer Update And Timing Data Collection | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+Retarget | Checksum: 14ddd20a3
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+Constant propagation | Checksum: 14ddd20a3
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+Phase 5 Sweep | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3012.504 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+Sweep | Checksum: 14ddd20a3
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+BUFG optimization | Checksum: 14ddd20a3
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+Shift Register Optimization | Checksum: 14ddd20a3
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+Post Processing Netlist | Checksum: 14ddd20a3
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3076.520 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130251
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+Phase 9 Finalization | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3076.520 ; gain = 64.016 ; free physical = 113793 ; free virtual = 130251
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3076.520 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3076.520 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3076.520 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+Ending Netlist Obfuscation Task | Checksum: 14ddd20a3
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3076.520 ; gain = 0.000 ; free physical = 113793 ; free virtual = 130252
+INFO: [Common 17-83] Releasing license: Implementation
+20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3076.520 ; gain = 729.805 ; free physical = 113793 ; free virtual = 130252
+# report_utilization
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Nov 19 14:08:31 2025
+| Host         : fiora running 64-bit Solus 4.8 Opportunity
+| Command      : report_utilization
+| Design       : lzc_unopt
+| Device       : xc7k70tfbv676-1
+| Speed File   : -1
+| Design State : Optimized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+1.1 Summary of Registers by Type
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+6. Specific Feature
+7. Primitives
+8. Black Boxes
+9. Instantiated Netlists
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+------------+-----------+-------+
+|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
++-------------------------+------+-------+------------+-----------+-------+
+| Slice LUTs*             |   19 |     0 |          0 |     41000 |  0.05 |
+|   LUT as Logic          |   19 |     0 |          0 |     41000 |  0.05 |
+|   LUT as Memory         |    0 |     0 |          0 |     13400 |  0.00 |
+| Slice Registers         |    0 |     0 |          0 |     82000 |  0.00 |
+|   Register as Flip Flop |    0 |     0 |          0 |     82000 |  0.00 |
+|   Register as Latch     |    0 |     0 |          0 |     82000 |  0.00 |
+| F7 Muxes                |    0 |     0 |          0 |     20500 |  0.00 |
+| F8 Muxes                |    0 |     0 |          0 |     10250 |  0.00 |
++-------------------------+------+-------+------------+-----------+-------+
+* Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
+Warning! LUT value is adjusted to account for LUT combining.
+Warning! For any ECO changes, please run place_design if there are unplaced instances
+
+
+1.1 Summary of Registers by Type
+--------------------------------
+
++-------+--------------+-------------+--------------+
+| Total | Clock Enable | Synchronous | Asynchronous |
++-------+--------------+-------------+--------------+
+| 0     |            _ |           - |            - |
+| 0     |            _ |           - |          Set |
+| 0     |            _ |           - |        Reset |
+| 0     |            _ |         Set |            - |
+| 0     |            _ |       Reset |            - |
+| 0     |          Yes |           - |            - |
+| 0     |          Yes |           - |          Set |
+| 0     |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 0     |          Yes |       Reset |            - |
++-------+--------------+-------------+--------------+
+
+
+2. Memory
+---------
+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| Block RAM Tile |    0 |     0 |          0 |       135 |  0.00 |
+|   RAMB36/FIFO* |    0 |     0 |          0 |       135 |  0.00 |
+|   RAMB18       |    0 |     0 |          0 |       270 |  0.00 |
++----------------+------+-------+------------+-----------+-------+
+* Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
+
+
+3. DSP
+------
+
++-----------+------+-------+------------+-----------+-------+
+| Site Type | Used | Fixed | Prohibited | Available | Util% |
++-----------+------+-------+------------+-----------+-------+
+| DSPs      |    0 |     0 |          0 |       240 |  0.00 |
++-----------+------+-------+------------+-----------+-------+
+
+
+4. IO and GT Specific
+---------------------
+
++-----------------------------+------+-------+------------+-----------+-------+
+|          Site Type          | Used | Fixed | Prohibited | Available | Util% |
++-----------------------------+------+-------+------------+-----------+-------+
+| Bonded IOB                  |   28 |     0 |          0 |       300 |  9.33 |
+| Bonded IPADs                |    0 |     0 |          0 |        26 |  0.00 |
+| Bonded OPADs                |    0 |     0 |          0 |        16 |  0.00 |
+| PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
+| PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
+| OUT_FIFO                    |    0 |     0 |          0 |        24 |  0.00 |
+| IN_FIFO                     |    0 |     0 |          0 |        24 |  0.00 |
+| IDELAYCTRL                  |    0 |     0 |          0 |         6 |  0.00 |
+| IBUFDS                      |    0 |     0 |          0 |       288 |  0.00 |
+| GTXE2_COMMON                |    0 |     0 |          0 |         2 |  0.00 |
+| GTXE2_CHANNEL               |    0 |     0 |          0 |         8 |  0.00 |
+| PHASER_OUT/PHASER_OUT_PHY   |    0 |     0 |          0 |        24 |  0.00 |
+| PHASER_IN/PHASER_IN_PHY     |    0 |     0 |          0 |        24 |  0.00 |
+| IDELAYE2/IDELAYE2_FINEDELAY |    0 |     0 |          0 |       300 |  0.00 |
+| ODELAYE2/ODELAYE2_FINEDELAY |    0 |     0 |          0 |       100 |  0.00 |
+| IBUFDS_GTE2                 |    0 |     0 |          0 |         4 |  0.00 |
+| ILOGIC                      |    0 |     0 |          0 |       300 |  0.00 |
+| OLOGIC                      |    0 |     0 |          0 |       300 |  0.00 |
++-----------------------------+------+-------+------------+-----------+-------+
+
+
+5. Clocking
+-----------
+
++------------+------+-------+------------+-----------+-------+
+|  Site Type | Used | Fixed | Prohibited | Available | Util% |
++------------+------+-------+------------+-----------+-------+
+| BUFGCTRL   |    0 |     0 |          0 |        32 |  0.00 |
+| BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
+| MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
+| PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
+| BUFMRCE    |    0 |     0 |          0 |        12 |  0.00 |
+| BUFHCE     |    0 |     0 |          0 |        96 |  0.00 |
+| BUFR       |    0 |     0 |          0 |        24 |  0.00 |
++------------+------+-------+------------+-----------+-------+
+
+
+6. Specific Feature
+-------------------
+
++-------------+------+-------+------------+-----------+-------+
+|  Site Type  | Used | Fixed | Prohibited | Available | Util% |
++-------------+------+-------+------------+-----------+-------+
+| BSCANE2     |    0 |     0 |          0 |         4 |  0.00 |
+| CAPTUREE2   |    0 |     0 |          0 |         1 |  0.00 |
+| DNA_PORT    |    0 |     0 |          0 |         1 |  0.00 |
+| EFUSE_USR   |    0 |     0 |          0 |         1 |  0.00 |
+| FRAME_ECCE2 |    0 |     0 |          0 |         1 |  0.00 |
+| ICAPE2      |    0 |     0 |          0 |         2 |  0.00 |
+| PCIE_2_1    |    0 |     0 |          0 |         1 |  0.00 |
+| STARTUPE2   |    0 |     0 |          0 |         1 |  0.00 |
+| XADC        |    0 |     0 |          0 |         1 |  0.00 |
++-------------+------+-------+------------+-----------+-------+
+
+
+7. Primitives
+-------------
+
++----------+------+---------------------+
+| Ref Name | Used | Functional Category |
++----------+------+---------------------+
+| IBUF     |   23 |                  IO |
+| LUT6     |   13 |                 LUT |
+| LUT4     |    6 |                 LUT |
+| OBUF     |    5 |                  IO |
+| LUT2     |    3 |                 LUT |
+| LUT5     |    2 |                 LUT |
++----------+------+---------------------+
+
+
+8. Black Boxes
+--------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+9. Instantiated Netlists
+------------------------
+
++----------+------+
+| Ref Name | Used |
++----------+------+
+
+
+# report_timing
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Wed Nov 19 14:08:31 2025
+| Host         : fiora running 64-bit Solus 4.8 Opportunity
+| Command      : report_timing
+| Design       : lzc_unopt
+| Device       : 7k70t-fbv676
+| Speed File   : -1  PRODUCTION 1.12 2017-02-17
+| Design State : Optimized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 num[10]
+                            (input port)
+  Destination:            ZeroCnt[3]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.336ns  (logic 3.467ns (64.969%)  route 1.869ns (35.031%))
+  Logic Levels:           5  (IBUF=1 LUT4=1 LUT5=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 r  num[10] (IN)
+                         net (fo=0)                   0.000     0.000    num[10]
+                         IBUF (Prop_ibuf_I_O)         0.830     0.830 r  num_IBUF[10]_inst/O
+                         net (fo=3, unplaced)         0.584     1.413    num_IBUF[10]
+                         LUT4 (Prop_lut4_I0_O)        0.066     1.479 r  ZeroCnt_OBUF[4]_inst_i_4/O
+                         net (fo=2, unplaced)         0.351     1.830    ZeroCnt_OBUF[4]_inst_i_4_n_0
+                         LUT5 (Prop_lut5_I4_O)        0.056     1.886 r  ZeroCnt_OBUF[4]_inst_i_3/O
+                         net (fo=2, unplaced)         0.351     2.237    ZeroCnt_OBUF[4]_inst_i_3_n_0
+                         LUT6 (Prop_lut6_I5_O)        0.053     2.290 r  ZeroCnt_OBUF[3]_inst_i_1/O
+                         net (fo=1, unplaced)         0.584     2.874    ZeroCnt_OBUF[3]
+                         OBUF (Prop_obuf_I_O)         2.462     5.336 r  ZeroCnt_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     5.336    ZeroCnt[3]
+                                                                      r  ZeroCnt[3] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+# report_power
+Command: report_power
+WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
+Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date             : Wed Nov 19 14:08:31 2025
+| Host             : fiora running 64-bit Solus 4.8 Opportunity
+| Command          : report_power
+| Design           : lzc_unopt
+| Device           : xc7k70tfbv676-1
+| Design State     : synthesized
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 1.211        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.128        |
+| Device Static (W)        | 0.083        |
+| Effective TJA (C/W)      | 1.9          |
+| Max Ambient (C)          | 82.7         |
+| Junction Temperature (C) | 27.3         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++----------------+-----------+----------+-----------+-----------------+
+| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
++----------------+-----------+----------+-----------+-----------------+
+| Slice Logic    |     0.064 |       24 |       --- |             --- |
+|   LUT as Logic |     0.064 |       19 |     41000 |            0.05 |
+| Signals        |     0.170 |       47 |       --- |             --- |
+| I/O            |     0.894 |       28 |       300 |            9.33 |
+| Static Power   |     0.083 |          |           |                 |
+| Total          |     1.211 |          |           |                 |
++----------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |     0.350 |       0.327 |      0.024 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.072 |       0.060 |      0.012 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.386 |       0.385 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | Low        | Design is synthesized                                  | Accuracy of the tool is not optimal until design is fully placed and routed                                |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 1.9                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 3.4                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------+-----------+
+| Name      | Power (W) |
++-----------+-----------+
+| lzc_unopt |     1.128 |
++-----------+-----------+
+
+
+0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 19 14:08:31 2025...

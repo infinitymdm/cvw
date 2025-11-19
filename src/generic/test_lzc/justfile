@@ -50,8 +50,9 @@ genus-synth: _synth-prep
     genus -f genus/genus_prior.tcl | tee logs/genus_prior.log
 
 vivado-synth: _synth-prep
-    vivado -mode batch -source vivado/vivado_recursive.tcl | tee logs/vivado_recursive.log
-    vivado -mode batch -source vivado/vivado_prior.tcl | tee logs/vivado_prior.log
+    vivado -mode batch -source vivado/vivado_recursive_opt.tcl | tee logs/recursive_opt/vivado.log
+    vivado -mode batch -source vivado/vivado_recursive_unopt.tcl | tee logs/recursive_unopt/vivado.log
+    vivado -mode batch -source vivado/vivado_prior.tcl | tee logs/prior/vivado.log
 
 synth-all:
     @just clean
