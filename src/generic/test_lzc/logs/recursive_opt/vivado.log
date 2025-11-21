@@ -3,7 +3,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Wed Nov 19 14:07:43 2025
+  **** Start of session at: Fri Nov 21 12:22:46 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -17,9 +17,9 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 65689
+INFO: [Synth 8-7075] Helper process launched with PID 164315
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1761.398 ; gain = 308.855 ; free physical = 114709 ; free virtual = 131161
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1761.910 ; gain = 370.855 ; free physical = 110161 ; free virtual = 130068
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'lzc' [/home/marcus/software/cvw/src/generic/lzc.sv:27]
 INFO: [Synth 8-6157] synthesizing module 'lzc__parameterized0' [/home/marcus/software/cvw/src/generic/lzc.sv:27]
@@ -33,47 +33,33 @@ INFO: [Synth 8-6157] synthesizing module 'lzc__parameterized3' [/home/marcus/sof
 INFO: [Synth 8-6157] synthesizing module 'lzc__parameterized4' [/home/marcus/software/cvw/src/generic/lzc.sv:27]
 	Parameter WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized4' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (2) of port connection 'ZeroCnt' does not match port width (1) of module 'lzc__parameterized4' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
-WARNING: [Synth 8-689] width (2) of port connection 'ZeroCnt' does not match port width (1) of module 'lzc__parameterized4' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized3' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc__parameterized3' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
-WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc__parameterized3' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized2' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc__parameterized2' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
-WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc__parameterized2' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized1' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (5) of port connection 'ZeroCnt' does not match port width (4) of module 'lzc__parameterized1' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
-WARNING: [Synth 8-689] width (5) of port connection 'ZeroCnt' does not match port width (4) of module 'lzc__parameterized1' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized0' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (6) of port connection 'ZeroCnt' does not match port width (5) of module 'lzc__parameterized0' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
 INFO: [Synth 8-6157] synthesizing module 'lzc__parameterized5' [/home/marcus/software/cvw/src/generic/lzc.sv:27]
 	Parameter WIDTH bound to: 7 - type: integer 
-WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc__parameterized2' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
 INFO: [Synth 8-6157] synthesizing module 'lzc__parameterized6' [/home/marcus/software/cvw/src/generic/lzc.sv:27]
 	Parameter WIDTH bound to: 3 - type: integer 
-WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc__parameterized3' [/home/marcus/software/cvw/src/generic/lzc.sv:48]
-WARNING: [Synth 8-689] width (2) of port connection 'ZeroCnt' does not match port width (1) of module 'lzc__parameterized4' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized6' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (3) of port connection 'ZeroCnt' does not match port width (2) of module 'lzc__parameterized6' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc__parameterized5' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
-WARNING: [Synth 8-689] width (4) of port connection 'ZeroCnt' does not match port width (3) of module 'lzc__parameterized5' [/home/marcus/software/cvw/src/generic/lzc.sv:49]
 INFO: [Synth 8-6155] done synthesizing module 'lzc' (0#1) [/home/marcus/software/cvw/src/generic/lzc.sv:27]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1833.367 ; gain = 380.824 ; free physical = 114629 ; free virtual = 131082
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1833.879 ; gain = 442.824 ; free physical = 110077 ; free virtual = 129985
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1851.180 ; gain = 398.637 ; free physical = 114622 ; free virtual = 131075
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1851.691 ; gain = 460.637 ; free physical = 110069 ; free virtual = 129976
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7k70tfbv676-1
----------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7k70tfbv676-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1867.184 ; gain = 414.641 ; free physical = 114622 ; free virtual = 131075
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1867.695 ; gain = 476.641 ; free physical = 110069 ; free virtual = 129976
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1876.090 ; gain = 423.547 ; free physical = 114610 ; free virtual = 131064
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1876.602 ; gain = 485.547 ; free physical = 110061 ; free virtual = 129969
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
@@ -108,20 +94,20 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1972.988 ; gain = 520.445 ; free physical = 114448 ; free virtual = 130905
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1973.508 ; gain = 582.453 ; free physical = 109904 ; free virtual = 129815
 ---------------------------------------------------------------------------------
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1978.926 ; gain = 526.383 ; free physical = 114452 ; free virtual = 130909
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1979.445 ; gain = 588.391 ; free physical = 109900 ; free virtual = 129811
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1978.926 ; gain = 526.383 ; free physical = 114444 ; free virtual = 130901
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1979.445 ; gain = 588.391 ; free physical = 109900 ; free virtual = 129811
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -139,37 +125,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -200,26 +186,26 @@ Report Instance Areas:
 |1     |top      |       |    57|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 15 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.738 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.746 ; gain = 675.195 ; free physical = 114304 ; free virtual = 130760
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.258 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2127.266 ; gain = 736.203 ; free physical = 109811 ; free virtual = 129723
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2142.613 ; gain = 0.000 ; free physical = 114412 ; free virtual = 130869
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2141.133 ; gain = 0.000 ; free physical = 109933 ; free virtual = 129844
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2355.266 ; gain = 0.000 ; free physical = 114347 ; free virtual = 130803
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2346.723 ; gain = 0.000 ; free physical = 109853 ; free virtual = 129765
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete | Checksum: 9aae7b21
 INFO: [Common 17-83] Releasing license: Synthesis
-26 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+26 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2355.266 ; gain = 902.730 ; free physical = 114346 ; free virtual = 130803
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1742.361; main = 1742.361; forked = 0.000
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2355.270; main = 2355.270; forked = 0.000
+synth_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 2346.723 ; gain = 955.676 ; free physical = 109854 ; free virtual = 129765
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1749.441; main = 1749.441; forked = 0.000
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 2346.727; main = 2346.727; forked = 0.000
 # opt_design
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
@@ -231,13 +217,13 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.27 . Memory (MB): peak = 2498.141 ; gain = 142.875 ; free physical = 114326 ; free virtual = 130783
+Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.25 . Memory (MB): peak = 2489.598 ; gain = 142.875 ; free physical = 109841 ; free virtual = 129753
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2744.148 ; gain = 246.008 ; free physical = 114141 ; free virtual = 130598
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2744.605 ; gain = 255.008 ; free physical = 109655 ; free virtual = 129566
 
 Starting Logic Optimization Task
 
@@ -246,30 +232,30 @@ Phase 1 Initialization
 Phase 1.1 Core Generation And Design Setup
 Phase 1.1 Core Generation And Design Setup | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113883 ; free virtual = 130340
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 
 Phase 1.2 Setup Constraints And Sort Netlist
 Phase 1.2 Setup Constraints And Sort Netlist | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113883 ; free virtual = 130340
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Phase 1 Initialization | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113883 ; free virtual = 130340
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 
 Phase 2 Timer Update And Timing Data Collection
 
 Phase 2.1 Timer Update
 Phase 2.1 Timer Update | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113883 ; free virtual = 130340
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 
 Phase 2.2 Timing Data Collection
 Phase 2.2 Timing Data Collection | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113884 ; free virtual = 130341
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Phase 2 Timer Update And Timing Data Collection | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113884 ; free virtual = 130341
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 
 Phase 3 Retarget
 INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
@@ -278,7 +264,7 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 3 Retarget | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113884 ; free virtual = 130341
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Retarget | Checksum: feb35fcd
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
@@ -286,23 +272,23 @@ Phase 4 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Phase 4 Constant propagation | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113884 ; free virtual = 130341
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Constant propagation | Checksum: feb35fcd
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 5 Sweep
 INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
-Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113880 ; free virtual = 130337
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Phase 5 Sweep | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3019.055 ; gain = 0.000 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3018.543 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Sweep | Checksum: feb35fcd
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 6 BUFG optimization
 Phase 6 BUFG optimization | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 BUFG optimization | Checksum: feb35fcd
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
@@ -310,14 +296,14 @@ Phase 7 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
 Phase 7 Shift Register Optimization | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 Shift Register Optimization | Checksum: feb35fcd
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 8 Post Processing Netlist
 Phase 8 Post Processing Netlist | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 Post Processing Netlist | Checksum: feb35fcd
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 
@@ -326,19 +312,19 @@ Phase 9 Finalization
 Phase 9.1 Finalizing Design Cores and Updating Shapes
 Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 
 Phase 9.2 Verifying Netlist Connectivity
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3083.070 ; gain = 0.000 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3082.559 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Phase 9.2 Verifying Netlist Connectivity | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 Phase 9 Finalization | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 Opt_design Change Summary
 =========================
 
@@ -357,33 +343,33 @@ Opt_design Change Summary
 
 Ending Logic Optimization Task | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3083.070 ; gain = 64.016 ; free physical = 113880 ; free virtual = 130337
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3082.559 ; gain = 64.016 ; free physical = 109395 ; free virtual = 129306
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 Ending Power Optimization Task | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3083.070 ; gain = 0.000 ; free physical = 113882 ; free virtual = 130339
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3082.559 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 
 Starting Final Cleanup Task
 Ending Final Cleanup Task | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3083.070 ; gain = 0.000 ; free physical = 113882 ; free virtual = 130339
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3082.559 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3083.070 ; gain = 0.000 ; free physical = 113882 ; free virtual = 130339
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3082.559 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 Ending Netlist Obfuscation Task | Checksum: feb35fcd
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3083.070 ; gain = 0.000 ; free physical = 113882 ; free virtual = 130339
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3082.559 ; gain = 0.000 ; free physical = 109395 ; free virtual = 129306
 INFO: [Common 17-83] Releasing license: Implementation
 20 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3083.070 ; gain = 727.805 ; free physical = 113882 ; free virtual = 130339
+opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3082.559 ; gain = 735.836 ; free physical = 109395 ; free virtual = 129306
 # report_utilization
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Wed Nov 19 14:08:01 2025
+| Date         : Fri Nov 21 12:23:04 2025
 | Host         : fiora running 64-bit Solus 4.8 Opportunity
 | Command      : report_utilization
 | Design       : lzc
@@ -569,7 +555,7 @@ INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max 
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date         : Wed Nov 19 14:08:01 2025
+| Date         : Fri Nov 21 12:23:04 2025
 | Host         : fiora running 64-bit Solus 4.8 Opportunity
 | Command      : report_timing
 | Design       : lzc
@@ -620,7 +606,7 @@ Finished Running Vector-less Activity Propagation
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Wed Nov 19 14:08:01 2025
+| Date             : Fri Nov 21 12:23:04 2025
 | Host             : fiora running 64-bit Solus 4.8 Opportunity
 | Command          : report_power
 | Design           : lzc
@@ -760,4 +746,4 @@ Table of Contents
 
 0 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 19 14:08:01 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 21 12:23:04 2025...

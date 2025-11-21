@@ -12,6 +12,5 @@ set_global_assignment -name SYSTEMVERILOG_FILE "$PWD/lzc_unopt.sv"
 execute_flow -analysis_and_elaboration
 execute_flow -compile
 create_timing_netlist -post_map
-report_timing -setup -npaths 100 -detail full_path
-check_timing
+report_datasheet
 project_close

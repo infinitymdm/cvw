@@ -8,8 +8,8 @@ module lzc_unopt #(parameter WIDTH = 23) (
   localparam RWIDTH = WIDTH/2;
   logic [LWIDTH-1:0] LNum;
   logic [RWIDTH-1:0] RNum;
-  logic [$clog2(LWIDTH+1):0] LCnt;
-  logic [$clog2(RWIDTH+1):0] RCnt;
+  logic [$clog2(LWIDTH+1)-1:0] LCnt;
+  logic [$clog2(RWIDTH+1)-1:0] RCnt;
 
   assign {LNum, RNum} = num;
   generate

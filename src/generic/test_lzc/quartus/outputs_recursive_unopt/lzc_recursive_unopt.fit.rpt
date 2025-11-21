@@ -1,5 +1,5 @@
 Fitter report for lzc_recursive_unopt
-Wed Nov 19 13:48:40 2025
+Fri Nov 21 12:24:54 2025
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Nov 19 13:48:40 2025           ;
+; Fitter Status                   ; Successful - Fri Nov 21 12:24:54 2025           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; lzc_recursive_unopt                             ;
 ; Top-level Entity Name           ; lzc_unopt                                       ;
@@ -154,8 +154,7 @@ on the Quartus Prime software download page.
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
 ;     Processor 5            ;   0.2%      ;
-;     Processor 6            ;   0.1%      ;
-;     Processors 7-16        ;   0.1%      ;
+;     Processors 6-16        ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -1380,7 +1379,7 @@ Info (184021): Fitter periphery placement operations ending: elapsed time is 00:
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:04
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'lzc_recursive_unopt.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -1406,11 +1405,11 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 2757 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:41 2025
-    Info: Elapsed time: 00:00:15
+    Info: Peak virtual memory: 2772 megabytes
+    Info: Processing ended: Fri Nov 21 12:24:54 2025
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:46
 
 

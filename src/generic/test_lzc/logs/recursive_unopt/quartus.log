@@ -15,13 +15,13 @@ Info: Running Quartus Prime Timing Analyzer
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Wed Nov 19 13:48:17 2025
+    Info: Processing started: Fri Nov 21 12:24:30 2025
 Info: Command: quartus_sta -t quartus/quartus_recursive_unopt.tcl
 Info (125061): Changed top-level design entity name to "lzc_unopt"
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Nov 19 13:48:17 2025
+    Info: Processing started: Fri Nov 21 12:24:31 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_recursive_unopt -c lzc_recursive_unopt --analysis_and_elaboration
 Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -32,53 +32,21 @@ Info (12127): Elaborating entity "lzc_unopt" for the top level hierarchy
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at lzc_unopt.sv(21): truncated value with size 3 to match size of target (2) File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 21
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Warning (10036): Verilog HDL or VHDL warning at lzc_unopt.sv(9): object "LNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 9
 Warning (10036): Verilog HDL or VHDL warning at lzc_unopt.sv(10): object "RNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 10
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:r_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:r_lcz|lzc_unopt:r_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 707 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:21 2025
-    Info: Elapsed time: 00:00:04
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 711 megabytes
+    Info: Processing ended: Fri Nov 21 12:24:34 2025
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:10
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Nov 19 13:48:22 2025
+    Info: Processing started: Fri Nov 21 12:24:35 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_recursive_unopt -c lzc_recursive_unopt
 Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -89,44 +57,12 @@ Info (12127): Elaborating entity "lzc_unopt" for the top level hierarchy
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at lzc_unopt.sv(21): truncated value with size 3 to match size of target (2) File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 21
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz|lzc_unopt:l_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
 Warning (10036): Verilog HDL or VHDL warning at lzc_unopt.sv(9): object "LNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 9
 Warning (10036): Verilog HDL or VHDL warning at lzc_unopt.sv(10): object "RNum" assigned a value but never read File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 10
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:r_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
 Info (12128): Elaborating entity "lzc_unopt" for hierarchy "lzc_unopt:r_lcz|lzc_unopt:r_lcz" File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "r_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 20
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 2. The formal width of the signal in the module is 1.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12030): Port "ordered port 1" on the entity instantiation of "l_lcz" is connected to a signal of width 3. The formal width of the signal in the module is 2.  The extra bits will be left dangling without any fan-out logic. File: /home/marcus/software/cvw/src/generic/test_lzc/lzc_unopt.sv Line: 19
-Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -134,15 +70,15 @@ Info (21057): Implemented 75 device resources after synthesis - the final resour
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 5 output pins
     Info (21061): Implemented 47 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 470 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:25 2025
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Fri Nov 21 12:24:39 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:11
 Info: *******************************************************************
 Info: Running Quartus Prime Fitter
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Nov 19 13:48:26 2025
+    Info: Processing started: Fri Nov 21 12:24:40 2025
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lzc_recursive_unopt -c lzc_recursive_unopt
 Info: qfit2_default_script.tcl version: #1
 Info: Project  = lzc_recursive_unopt
@@ -161,7 +97,7 @@ Info (184021): Fitter periphery placement operations ending: elapsed time is 00:
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:04
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'lzc_recursive_unopt.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
@@ -187,29 +123,29 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 2757 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:41 2025
-    Info: Elapsed time: 00:00:15
+    Info: Peak virtual memory: 2772 megabytes
+    Info: Processing ended: Fri Nov 21 12:24:54 2025
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:46
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Nov 19 13:48:41 2025
+    Info: Processing started: Fri Nov 21 12:24:55 2025
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lzc_recursive_unopt -c lzc_recursive_unopt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 514 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:46 2025
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Fri Nov 21 12:24:59 2025
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 Info (293026): Skipped module Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Wed Nov 19 13:48:46 2025
+    Info: Processing started: Fri Nov 21 12:25:00 2025
 Info: Command: quartus_sta lzc_recursive_unopt -c lzc_recursive_unopt
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -269,11 +205,11 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1040 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:49 2025
+    Info: Peak virtual memory: 1039 megabytes
+    Info: Processing ended: Fri Nov 21 12:25:03 2025
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
-Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 48 warnings
+Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 16 warnings
 Critical Warning (332199): Ignored -post_map option. The Timing Analyzer does not allow timing analysis of the post-synthesis netlist after you run the Fitter.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 48 processors detected
@@ -284,70 +220,245 @@ Info (332096): The command derive_clocks did not find any clocks to derive.  No 
 Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332115): Report Timing: No setup paths were found
-    Info (332115): -setup
-    Info (332115): -npaths 100
-    Info (332115): -detail full_path
-    Info (332115): -stdout
-Info (332106): Check Timing:
-Info (332106): Virtual Clock
-    Info (332106): 	No virtual clock was found.	
-Info (332106): No Input Delay
-    Info (332106): num[20]	No input delay was set on input port.	
-    Info (332106): num[22]	No input delay was set on input port.	
-    Info (332106): num[13]	No input delay was set on input port.	
-    Info (332106): num[14]	No input delay was set on input port.	
-    Info (332106): num[12]	No input delay was set on input port.	
-    Info (332106): num[11]	No input delay was set on input port.	
-    Info (332106): num[15]	No input delay was set on input port.	
-    Info (332106): num[16]	No input delay was set on input port.	
-    Info (332106): num[18]	No input delay was set on input port.	
-    Info (332106): num[19]	No input delay was set on input port.	
-    Info (332106): num[21]	No input delay was set on input port.	
-    Info (332106): num[17]	No input delay was set on input port.	
-    Info (332106): num[10]	No input delay was set on input port.	
-    Info (332106): num[6]	No input delay was set on input port.	
-    Info (332106): num[7]	No input delay was set on input port.	
-    Info (332106): num[5]	No input delay was set on input port.	
-    Info (332106): num[9]	No input delay was set on input port.	
-    Info (332106): num[8]	No input delay was set on input port.	
-    Info (332106): num[1]	No input delay was set on input port.	
-    Info (332106): num[3]	No input delay was set on input port.	
-    Info (332106): num[4]	No input delay was set on input port.	
-    Info (332106): num[2]	No input delay was set on input port.	
-    Info (332106): num[0]	No input delay was set on input port.	
-Info (332106): No Output Delay
-    Info (332106): ZeroCnt[0]	No output delay was set on output port.	
-    Info (332106): ZeroCnt[1]	No output delay was set on output port.	
-    Info (332106): ZeroCnt[2]	No output delay was set on output port.	
-    Info (332106): ZeroCnt[3]	No output delay was set on output port.	
-    Info (332106): ZeroCnt[4]	No output delay was set on output port.	
-Info (332106): Summary
-    Info (332106): no_clock	0	
-    Info (332106): multiple_clock	0	
-    Info (332106): pos_neg_clock_domain	0	
-    Info (332106): generated_clock	0	
-    Info (332106): virtual_clock	1	
-    Info (332106): no_input_delay	23	
-    Info (332106): no_output_delay	5	
-    Info (332106): partial_input_delay	0	
-    Info (332106): partial_output_delay	0	
-    Info (332106): io_min_max_delay_consistency	0	
-    Info (332106): reference_pin	0	
-    Info (332106): generated_io_delay	0	
-    Info (332106): latency_override	0	
-    Info (332106): partial_multicycle	0	
-    Info (332106): multicycle_consistency	0	
-    Info (332106): loops	0	
-    Info (332106): latches	0	
-    Info (332106): pll_cross_check	0	
-    Info (332106): uncertainty	0	
-    Info (332106): partial_min_max_delay	0	
-    Info (332106): clock_assignments_on_output_ports	0	
-    Info (332106): input_delay_assigned_to_clock	0	
+Info (332118): Propagation Delays
+    Info (332118):         RR         RF         FR         FF Input port           Output Port
+    Info (332118): ========== ========== ========== ========== ==================== ====================
+    Info (332118):     14.863     15.485     15.459     16.081 num[0]               ZeroCnt[0]          
+    Info (332118):     14.781     15.143     15.377     15.739 num[0]               ZeroCnt[1]          
+    Info (332118):     14.922     15.382     15.518     15.978 num[0]               ZeroCnt[2]          
+    Info (332118):     14.733     15.266     15.329     15.862 num[0]               ZeroCnt[3]          
+    Info (332118):     15.322     15.903     15.918     16.499 num[0]               ZeroCnt[4]          
+    Info (332118):     13.675     14.297     13.755     14.377 num[1]               ZeroCnt[0]          
+    Info (332118):     13.593     13.955     13.673     14.035 num[1]               ZeroCnt[1]          
+    Info (332118):     13.734     14.194     13.814     14.274 num[1]               ZeroCnt[2]          
+    Info (332118):     13.545     14.078     13.625     14.158 num[1]               ZeroCnt[3]          
+    Info (332118):     14.134     14.715     14.214     14.795 num[1]               ZeroCnt[4]          
+    Info (332118):     13.880     14.502     14.102     14.724 num[2]               ZeroCnt[0]          
+    Info (332118):     13.798     14.160     14.020     14.382 num[2]               ZeroCnt[1]          
+    Info (332118):     13.939     14.399     14.161     14.621 num[2]               ZeroCnt[2]          
+    Info (332118):     13.750     14.283     13.972     14.505 num[2]               ZeroCnt[3]          
+    Info (332118):     14.339     14.920     14.561     15.142 num[2]               ZeroCnt[4]          
+    Info (332118):     14.285     14.907     14.626     15.248 num[3]               ZeroCnt[0]          
+    Info (332118):     14.203     14.565     14.544     14.906 num[3]               ZeroCnt[1]          
+    Info (332118):     14.344     14.804     14.685     15.145 num[3]               ZeroCnt[2]          
+    Info (332118):     14.155     14.688     14.496     15.029 num[3]               ZeroCnt[3]          
+    Info (332118):     14.744     15.325     15.085     15.666 num[3]               ZeroCnt[4]          
+    Info (332118):     13.851     14.473     13.898     14.520 num[4]               ZeroCnt[0]          
+    Info (332118):     13.769     14.131     13.816     14.178 num[4]               ZeroCnt[1]          
+    Info (332118):     13.910     14.370     13.957     14.417 num[4]               ZeroCnt[2]          
+    Info (332118):     13.721     14.254     13.768     14.301 num[4]               ZeroCnt[3]          
+    Info (332118):     14.310     14.891     14.357     14.938 num[4]               ZeroCnt[4]          
+    Info (332118):     13.588     14.210     13.689     14.311 num[5]               ZeroCnt[0]          
+    Info (332118):     13.506     13.868     13.607     13.969 num[5]               ZeroCnt[1]          
+    Info (332118):     13.652     14.107     13.877     14.319 num[5]               ZeroCnt[2]          
+    Info (332118):     13.601     14.134     13.826     14.359 num[5]               ZeroCnt[3]          
+    Info (332118):     14.190     14.771     14.415     14.996 num[5]               ZeroCnt[4]          
+    Info (332118):     14.204     14.826     14.559     15.181 num[6]               ZeroCnt[0]          
+    Info (332118):     14.122     14.484     14.477     14.839 num[6]               ZeroCnt[1]          
+    Info (332118):     14.353     14.795     14.741     15.183 num[6]               ZeroCnt[2]          
+    Info (332118):     14.302     14.835     14.690     15.223 num[6]               ZeroCnt[3]          
+    Info (332118):     14.891     15.472     15.279     15.860 num[6]               ZeroCnt[4]          
+    Info (332118):     14.507     15.129     14.911     15.533 num[7]               ZeroCnt[0]          
+    Info (332118):     14.425     14.787     14.829     15.191 num[7]               ZeroCnt[1]          
+    Info (332118):     14.660     15.102     15.191     15.633 num[7]               ZeroCnt[2]          
+    Info (332118):     14.635     15.168     15.175     15.708 num[7]               ZeroCnt[3]          
+    Info (332118):     15.201     15.795     15.741     16.335 num[7]               ZeroCnt[4]          
+    Info (332118):     13.715     14.337     13.818     14.440 num[8]               ZeroCnt[0]          
+    Info (332118):     13.633     13.995     13.736     14.098 num[8]               ZeroCnt[1]          
+    Info (332118):     13.863     14.305     14.086     14.528 num[8]               ZeroCnt[2]          
+    Info (332118):     13.817     14.350     14.070     14.603 num[8]               ZeroCnt[3]          
+    Info (332118):     14.401     14.982     14.636     15.230 num[8]               ZeroCnt[4]          
+    Info (332118):     14.139     14.761     14.479     15.101 num[9]               ZeroCnt[0]          
+    Info (332118):     14.057     14.419     14.397     14.759 num[9]               ZeroCnt[1]          
+    Info (332118):     14.261     14.703     14.538     14.998 num[9]               ZeroCnt[2]          
+    Info (332118):     14.225     14.758     14.496     15.029 num[9]               ZeroCnt[3]          
+    Info (332118):     14.799     15.385     15.062     15.656 num[9]               ZeroCnt[4]          
+    Info (332118):     13.132     13.754     13.373     13.995 num[10]              ZeroCnt[0]          
+    Info (332118):     13.050     13.412     13.291     13.653 num[10]              ZeroCnt[1]          
+    Info (332118):     13.277     13.719     13.512     13.954 num[10]              ZeroCnt[2]          
+    Info (332118):     13.250     13.783     13.496     14.029 num[10]              ZeroCnt[3]          
+    Info (332118):     13.816     14.410     14.062     14.656 num[10]              ZeroCnt[4]          
+    Info (332118):     12.989     13.808     13.602     13.875 num[11]              ZeroCnt[0]          
+    Info (332118):     13.449     13.811     13.799     14.161 num[11]              ZeroCnt[1]          
+    Info (332118):     13.970     14.416     14.088     14.548 num[11]              ZeroCnt[2]          
+    Info (332118):     14.447     14.980     14.701     15.234 num[11]              ZeroCnt[3]          
+    Info (332118):     15.013     15.607     15.267     15.861 num[11]              ZeroCnt[4]          
+    Info (332118):     13.020     13.839     13.592     13.722 num[12]              ZeroCnt[0]          
+    Info (332118):     13.563     13.925     13.717     14.079 num[12]              ZeroCnt[1]          
+    Info (332118):     14.001     14.447     14.078     14.538 num[12]              ZeroCnt[2]          
+    Info (332118):     14.478     15.011     14.691     15.224 num[12]              ZeroCnt[3]          
+    Info (332118):     15.044     15.638     15.257     15.851 num[12]              ZeroCnt[4]          
+    Info (332118):     13.017     13.154     12.967     13.786 num[13]              ZeroCnt[0]          
+    Info (332118):     13.149     13.511     13.516     13.878 num[13]              ZeroCnt[1]          
+    Info (332118):     13.503     13.963     13.948     14.394 num[13]              ZeroCnt[2]          
+    Info (332118):     14.116     14.649     14.425     14.958 num[13]              ZeroCnt[3]          
+    Info (332118):     14.682     15.276     14.991     15.585 num[13]              ZeroCnt[4]          
+    Info (332118):     13.319     13.587     13.225     13.976 num[14]              ZeroCnt[0]          
+    Info (332118):     13.511     13.873     13.705     14.067 num[14]              ZeroCnt[1]          
+    Info (332118):     13.805     14.265     14.138     14.584 num[14]              ZeroCnt[2]          
+    Info (332118):     14.418     14.951     14.683     15.216 num[14]              ZeroCnt[3]          
+    Info (332118):     14.984     15.578     15.249     15.843 num[14]              ZeroCnt[4]          
+    Info (332118):     13.701     14.520     14.638     14.823 num[15]              ZeroCnt[0]          
+    Info (332118):     14.246     14.608     14.747     15.109 num[15]              ZeroCnt[1]          
+    Info (332118):     14.682     15.128     15.124     15.584 num[15]              ZeroCnt[2]          
+    Info (332118):     15.159     15.692     15.737     16.270 num[15]              ZeroCnt[3]          
+    Info (332118):     15.725     16.319     16.303     16.897 num[15]              ZeroCnt[4]          
+    Info (332118):     13.963     14.782     15.071     15.200 num[16]              ZeroCnt[0]          
+    Info (332118):     14.505     14.867     15.195     15.557 num[16]              ZeroCnt[1]          
+    Info (332118):     14.944     15.390     15.557     16.017 num[16]              ZeroCnt[2]          
+    Info (332118):     15.421     15.954     16.170     16.703 num[16]              ZeroCnt[3]          
+    Info (332118):     15.987     16.581     16.736     17.330 num[16]              ZeroCnt[4]          
+    Info (332118):     12.946     12.956     12.605     13.421 num[17]              ZeroCnt[0]          
+    Info (332118):     12.778     13.206     12.765     13.218 num[17]              ZeroCnt[1]          
+    Info (332118):     13.432     13.892     13.583     14.029 num[17]              ZeroCnt[2]          
+    Info (332118):     14.050     14.583     14.063     14.596 num[17]              ZeroCnt[3]          
+    Info (332118):     14.616     15.210     14.629     15.223 num[17]              ZeroCnt[4]          
+    Info (332118):     13.681     13.976     13.954     14.589 num[18]              ZeroCnt[0]          
+    Info (332118):     13.766     14.128     14.416     14.778 num[18]              ZeroCnt[1]          
+    Info (332118):     14.167     14.627     14.751     15.197 num[18]              ZeroCnt[2]          
+    Info (332118):     14.785     15.318     15.231     15.764 num[18]              ZeroCnt[3]          
+    Info (332118):     15.351     15.945     15.797     16.391 num[18]              ZeroCnt[4]          
+    Info (332118):     13.002     13.182     12.825     13.556 num[19]              ZeroCnt[0]          
+    Info (332118):     13.104     13.466     13.315     13.677 num[19]              ZeroCnt[1]          
+    Info (332118):     13.488     13.948     13.718     14.164 num[19]              ZeroCnt[2]          
+    Info (332118):     13.824     14.357     13.929     14.462 num[19]              ZeroCnt[3]          
+    Info (332118):     14.390     14.984     14.495     15.089 num[19]              ZeroCnt[4]          
+    Info (332118):     13.706     14.193     14.153     14.555 num[20]              ZeroCnt[0]          
+    Info (332118):     13.530     13.990     13.960     14.413 num[20]              ZeroCnt[1]          
+    Info (332118):     14.355     14.801     14.717     15.163 num[20]              ZeroCnt[2]          
+    Info (332118):     14.835     15.368     15.257     15.790 num[20]              ZeroCnt[3]          
+    Info (332118):     15.401     15.995     15.823     16.417 num[20]              ZeroCnt[4]          
+    Info (332118):     12.974     12.984     12.766     13.582 num[21]              ZeroCnt[0]          
+    Info (332118):     12.781     13.234     12.919     13.379 num[21]              ZeroCnt[1]          
+    Info (332118):     13.460     13.920     13.744     14.190 num[21]              ZeroCnt[2]          
+    Info (332118):     14.078     14.611     14.224     14.757 num[21]              ZeroCnt[3]          
+    Info (332118):     14.644     15.238     14.790     15.384 num[21]              ZeroCnt[4]          
+    Info (332118):     13.032     13.323     12.980     13.613 num[22]              ZeroCnt[0]          
+    Info (332118):     12.839     13.292     12.950     13.410 num[22]              ZeroCnt[1]          
+    Info (332118):     13.518     13.978     13.775     14.221 num[22]              ZeroCnt[2]          
+    Info (332118):     14.136     14.669     14.255     14.788 num[22]              ZeroCnt[3]          
+    Info (332118):     14.702     15.296     14.821     15.415 num[22]              ZeroCnt[4]          
+Info (332118): Minimum Propagation Delays
+    Info (332118):         RR         RF         FR         FF Input port           Output Port
+    Info (332118): ========== ========== ========== ========== ==================== ====================
+    Info (332118):     12.459     13.176     12.772     13.489 num[0]               ZeroCnt[0]          
+    Info (332118):     12.797     13.110     13.110     13.423 num[0]               ZeroCnt[1]          
+    Info (332118):     12.349     12.880     12.783     13.318 num[0]               ZeroCnt[2]          
+    Info (332118):     12.144     12.695     12.532     13.042 num[0]               ZeroCnt[3]          
+    Info (332118):     13.047     13.544     13.352     13.849 num[0]               ZeroCnt[4]          
+    Info (332118):     11.342     12.059     11.541     12.258 num[1]               ZeroCnt[0]          
+    Info (332118):     10.698     11.098     10.916     11.275 num[1]               ZeroCnt[1]          
+    Info (332118):     10.853     11.372     11.072     11.578 num[1]               ZeroCnt[2]          
+    Info (332118):     10.601     11.111     10.842     11.393 num[1]               ZeroCnt[3]          
+    Info (332118):     11.421     11.918     11.745     12.242 num[1]               ZeroCnt[4]          
+    Info (332118):     11.605     12.322     11.620     12.337 num[2]               ZeroCnt[0]          
+    Info (332118):     10.689     11.089     10.889     11.248 num[2]               ZeroCnt[1]          
+    Info (332118):     10.844     11.363     11.045     11.551 num[2]               ZeroCnt[2]          
+    Info (332118):     10.592     11.102     10.815     11.366 num[2]               ZeroCnt[3]          
+    Info (332118):     11.412     11.909     11.718     12.215 num[2]               ZeroCnt[4]          
+    Info (332118):     11.777     12.494     12.163     12.880 num[3]               ZeroCnt[0]          
+    Info (332118):     11.375     11.734     11.577     11.977 num[3]               ZeroCnt[1]          
+    Info (332118):     11.531     12.037     11.732     12.251 num[3]               ZeroCnt[2]          
+    Info (332118):     11.301     11.852     11.480     11.990 num[3]               ZeroCnt[3]          
+    Info (332118):     12.204     12.701     12.300     12.797 num[3]               ZeroCnt[4]          
+    Info (332118):     11.542     12.259     11.483     12.200 num[4]               ZeroCnt[0]          
+    Info (332118):     10.950     11.309     11.013     11.413 num[4]               ZeroCnt[1]          
+    Info (332118):     11.106     11.612     11.168     11.687 num[4]               ZeroCnt[2]          
+    Info (332118):     10.876     11.427     10.916     11.426 num[4]               ZeroCnt[3]          
+    Info (332118):     11.779     12.276     11.736     12.233 num[4]               ZeroCnt[4]          
+    Info (332118):     10.534     11.112     10.593     11.177 num[5]               ZeroCnt[0]          
+    Info (332118):     10.433     10.833     10.462     10.821 num[5]               ZeroCnt[1]          
+    Info (332118):     10.398     10.797     10.467     10.871 num[5]               ZeroCnt[2]          
+    Info (332118):     10.050     10.511     10.096     10.579 num[5]               ZeroCnt[3]          
+    Info (332118):     11.114     11.611     11.103     11.600 num[5]               ZeroCnt[4]          
+    Info (332118):     11.105     11.689     11.598     12.176 num[6]               ZeroCnt[0]          
+    Info (332118):     10.943     11.343     11.133     11.492 num[6]               ZeroCnt[1]          
+    Info (332118):     11.052     11.451     11.260     11.664 num[6]               ZeroCnt[2]          
+    Info (332118):     10.587     11.070     10.894     11.377 num[6]               ZeroCnt[3]          
+    Info (332118):     11.594     12.091     11.901     12.398 num[6]               ZeroCnt[4]          
+    Info (332118):     10.971     11.549     11.281     11.865 num[7]               ZeroCnt[0]          
+    Info (332118):     10.959     11.318     11.389     11.789 num[7]               ZeroCnt[1]          
+    Info (332118):     11.167     11.566     11.519     11.923 num[7]               ZeroCnt[2]          
+    Info (332118):     10.800     11.261     11.130     11.613 num[7]               ZeroCnt[3]          
+    Info (332118):     11.670     12.167     12.053     12.550 num[7]               ZeroCnt[4]          
+    Info (332118):     10.115     10.696     10.209     10.793 num[8]               ZeroCnt[0]          
+    Info (332118):     10.259     10.618     10.415     10.728 num[8]               ZeroCnt[1]          
+    Info (332118):     10.483     10.900     10.548     10.963 num[8]               ZeroCnt[2]          
+    Info (332118):     10.248     10.709     10.269     10.752 num[8]               ZeroCnt[3]          
+    Info (332118):     10.885     11.382     10.914     11.411 num[8]               ZeroCnt[4]          
+    Info (332118):     10.870     11.454     11.056     11.637 num[9]               ZeroCnt[0]          
+    Info (332118):     11.076     11.389     11.299     11.612 num[9]               ZeroCnt[1]          
+    Info (332118):     10.992     11.391     11.130     11.534 num[9]               ZeroCnt[2]          
+    Info (332118):     10.578     11.061     10.743     11.226 num[9]               ZeroCnt[3]          
+    Info (332118):     11.575     12.072     11.750     12.247 num[9]               ZeroCnt[4]          
+    Info (332118):      9.022      9.677      9.012      9.696 num[10]              ZeroCnt[0]          
+    Info (332118):      9.365      9.678      9.364      9.677 num[10]              ZeroCnt[1]          
+    Info (332118):      9.490      9.907      9.497      9.912 num[10]              ZeroCnt[2]          
+    Info (332118):      9.412      9.876      9.414      9.878 num[10]              ZeroCnt[3]          
+    Info (332118):      9.892     10.389      9.863     10.360 num[10]              ZeroCnt[4]          
+    Info (332118):     10.405     11.094     10.871     11.243 num[11]              ZeroCnt[0]          
+    Info (332118):     10.247     11.138     11.013     10.800 num[11]              ZeroCnt[1]          
+    Info (332118):     10.517     10.870     10.891     11.239 num[11]              ZeroCnt[2]          
+    Info (332118):     10.883     11.422     11.256     11.790 num[11]              ZeroCnt[3]          
+    Info (332118):     11.152     12.050     11.706     12.104 num[11]              ZeroCnt[4]          
+    Info (332118):     10.684     11.056     10.720     11.409 num[12]              ZeroCnt[0]          
+    Info (332118):     10.273     11.002     10.774     10.825 num[12]              ZeroCnt[1]          
+    Info (332118):     10.704     11.052     10.832     11.185 num[12]              ZeroCnt[2]          
+    Info (332118):     11.069     11.603     11.198     11.737 num[12]              ZeroCnt[3]          
+    Info (332118):     11.649     11.917     11.467     12.365 num[12]              ZeroCnt[4]          
+    Info (332118):     10.272     10.961     10.673     11.045 num[13]              ZeroCnt[0]          
+    Info (332118):     10.326     10.373     10.258     10.991 num[13]              ZeroCnt[1]          
+    Info (332118):     10.384     10.737     10.693     11.041 num[13]              ZeroCnt[2]          
+    Info (332118):     10.750     11.289     11.058     11.592 num[13]              ZeroCnt[3]          
+    Info (332118):     11.019     11.718     11.351     11.906 num[13]              ZeroCnt[4]          
+    Info (332118):     10.749     11.121     10.733     11.422 num[14]              ZeroCnt[0]          
+    Info (332118):     10.828     10.615     10.494     11.385 num[14]              ZeroCnt[1]          
+    Info (332118):     10.769     11.117     10.845     11.198 num[14]              ZeroCnt[2]          
+    Info (332118):     11.134     11.668     11.211     11.750 num[14]              ZeroCnt[3]          
+    Info (332118):     11.521     11.982     11.480     12.300 num[14]              ZeroCnt[4]          
+    Info (332118):     11.162     11.851     11.663     12.035 num[15]              ZeroCnt[0]          
+    Info (332118):     10.907     11.692     11.604     11.617 num[15]              ZeroCnt[1]          
+    Info (332118):     11.274     11.627     11.662     12.015 num[15]              ZeroCnt[2]          
+    Info (332118):     11.640     12.179     12.028     12.567 num[15]              ZeroCnt[3]          
+    Info (332118):     11.909     12.607     12.297     12.896 num[15]              ZeroCnt[4]          
+    Info (332118):     11.546     11.918     11.882     12.571 num[16]              ZeroCnt[0]          
+    Info (332118):     11.136     11.802     11.853     11.987 num[16]              ZeroCnt[1]          
+    Info (332118):     11.504     11.852     11.911     12.264 num[16]              ZeroCnt[2]          
+    Info (332118):     11.869     12.403     12.277     12.816 num[16]              ZeroCnt[3]          
+    Info (332118):     12.475     12.717     12.546     13.527 num[16]              ZeroCnt[4]          
+    Info (332118):     10.095     10.784     10.189     10.561 num[17]              ZeroCnt[0]          
+    Info (332118):     10.099     10.039      9.770     10.550 num[17]              ZeroCnt[1]          
+    Info (332118):      9.976      9.277      8.944     10.453 num[17]              ZeroCnt[2]          
+    Info (332118):     10.445     10.590     10.105     10.872 num[17]              ZeroCnt[3]          
+    Info (332118):     10.792     11.422     10.882     11.379 num[17]              ZeroCnt[4]          
+    Info (332118):     10.638     11.010     10.855     11.544 num[18]              ZeroCnt[0]          
+    Info (332118):     10.341     10.839     10.867     11.075 num[18]              ZeroCnt[1]          
+    Info (332118):     10.541      9.842      9.883     11.353 num[18]              ZeroCnt[2]          
+    Info (332118):     10.955     11.073     10.843     11.610 num[18]              ZeroCnt[3]          
+    Info (332118):     11.490     11.987     11.635     12.318 num[18]              ZeroCnt[4]          
+    Info (332118):     10.325     10.823     10.315     10.881 num[19]              ZeroCnt[0]          
+    Info (332118):      9.525      9.938      9.672      9.902 num[19]              ZeroCnt[1]          
+    Info (332118):      9.850      9.151      8.834     10.343 num[19]              ZeroCnt[2]          
+    Info (332118):     10.319     10.783     10.323     10.787 num[19]              ZeroCnt[3]          
+    Info (332118):     10.691     11.296     10.673     11.269 num[19]              ZeroCnt[4]          
+    Info (332118):     10.288     10.660     10.555     11.244 num[20]              ZeroCnt[0]          
+    Info (332118):     10.196     10.900     10.829     10.793 num[20]              ZeroCnt[1]          
+    Info (332118):     10.158      9.998     10.015     10.936 num[20]              ZeroCnt[2]          
+    Info (332118):     10.607     10.725     10.546     11.313 num[20]              ZeroCnt[3]          
+    Info (332118):     11.366     11.842     11.522     12.062 num[20]              ZeroCnt[4]          
+    Info (332118):      9.430     10.119      9.500      9.872 num[21]              ZeroCnt[0]          
+    Info (332118):      9.702      9.666      9.453     10.144 num[21]              ZeroCnt[1]          
+    Info (332118):      9.200      9.236      8.912      9.644 num[21]              ZeroCnt[2]          
+    Info (332118):      9.673      9.791      9.344     10.111 num[21]              ZeroCnt[3]          
+    Info (332118):     10.395     10.924     10.363     10.860 num[21]              ZeroCnt[4]          
+    Info (332118):      9.503      9.875      9.379     10.068 num[22]              ZeroCnt[0]          
+    Info (332118):      9.622      9.713      9.423     10.081 num[22]              ZeroCnt[1]          
+    Info (332118):      9.443      9.378      9.097      9.938 num[22]              ZeroCnt[2]          
+    Info (332118):      9.820      9.938      9.367     10.134 num[22]              ZeroCnt[3]          
+    Info (332118):     10.315     11.076     10.386     10.883 num[22]              ZeroCnt[4]          
 Info (23030): Evaluation of Tcl script quartus/quartus_recursive_unopt.tcl was successful
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 86 warnings
-    Info: Peak virtual memory: 643 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:50 2025
-    Info: Elapsed time: 00:00:33
-    Info: Total CPU time (on all processors): 00:01:16
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 635 megabytes
+    Info: Processing ended: Fri Nov 21 12:25:04 2025
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:01:17

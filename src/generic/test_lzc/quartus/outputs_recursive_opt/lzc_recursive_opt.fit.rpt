@@ -1,5 +1,5 @@
 Fitter report for lzc_recursive_opt
-Wed Nov 19 13:48:07 2025
+Fri Nov 21 12:24:20 2025
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -57,7 +57,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +---------------------------------+-------------------------------------------------+
-; Fitter Status                   ; Successful - Wed Nov 19 13:48:07 2025           ;
+; Fitter Status                   ; Successful - Fri Nov 21 12:24:20 2025           ;
 ; Quartus Prime Version           ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
 ; Revision Name                   ; lzc_recursive_opt                               ;
 ; Top-level Entity Name           ; lzc                                             ;
@@ -150,9 +150,10 @@ on the Quartus Prime software download page.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.2%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processors 4-16        ;   0.1%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processors 5-16        ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -1329,16 +1330,16 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.07 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 2813 megabytes
-    Info: Processing ended: Wed Nov 19 13:48:07 2025
-    Info: Elapsed time: 00:00:14
+    Info: Peak virtual memory: 2776 megabytes
+    Info: Processing ended: Fri Nov 21 12:24:21 2025
+    Info: Elapsed time: 00:00:15
     Info: Total CPU time (on all processors): 00:00:46
 
 

@@ -6,6 +6,8 @@ db
 incremental_db
 *.qsf
 *.qpf
+*.done
+*.sof
 
 *.mr
 alib-52
@@ -16,3 +18,5 @@ cksum_dir
 
 genus.*
 *.tstamp
+
+c5_pin_model_dump.txt
