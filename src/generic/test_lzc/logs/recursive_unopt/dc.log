@@ -1,0 +1,466 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+Information: License queuing is enabled. (DCSH-18)
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version X-2025.06 for linux64 - May 27, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Fri Nov 21 10:00:23 2025
+Hostname:           yukari.ecen.okstate.edu
+CPU Model:          AMD EPYC 74F3 24-Core Processor
+CPU Details:        Cores = 96 : Sockets = 2 : Cache Size = 512 KB : Freq = 3.19 GHz
+OS:                 Linux 3.10.0-1160.119.1.el7.x86_64
+RAM:                125 GB (Free  65 GB)
+Swap:                 3 GB (Free   3 GB)
+Work Filesystem:    /home/marcus mounted to patchy:/volume1/nfshome/marcus
+Tmp Filesystem:     / mounted to /dev/mapper/rhel_yukari-root
+Work Disk:          53622 GB (Free 41600 GB)
+Tmp Disk:           441 GB (Free 299 GB)
+
+CPU Load: 1%, Ram Free: 65 GB, Swap Free: 3 GB, Work Disk Free: 41600 GB, Tmp Disk Free: 299 GB
+# PDK setup
+# Change these variables to match your PDK
+set PDK_PATH "/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE"
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE
+set LIB_PATH "$PDK_PATH/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db"
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db
+set_app_var target_library $LIB_PATH
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db
+set_app_var link_library $LIB_PATH
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db
+analyze -f sverilog "lzc_unopt.sv"
+Running PRESTO HDLC
+Compiling source file ./lzc_unopt.sv
+Presto compilation completed successfully.
+Loading db file '/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db'
+1
+elaborate "lzc_unopt"
+Loading db file '/import/programs/synopsys/syn/current/libraries/syn/gtech.db'
+Loading db file '/import/programs/synopsys/syn/current/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp30p140tt0p9v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (lzc_unopt)
+Module: lzc_unopt, Ports: 28, Input: 23, Output: 5, Inout: 0
+Module: lzc_unopt, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_unopt report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'lzc_unopt'.
+Information: Building the design 'lzc_unopt' instantiated from design 'lzc_unopt' with
+	the parameters "12". (HDL-193)
+Presto compilation completed successfully. (lzc_unopt_WIDTH12)
+Module: lzc_unopt_WIDTH12, Ports: 16, Input: 12, Output: 4, Inout: 0
+Module: lzc_unopt_WIDTH12, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_unopt_WIDTH12 report end. (ELAB-965)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.l_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH12'. (LINK-25)
+Information: Building the design 'lzc_unopt' instantiated from design 'lzc_unopt' with
+	the parameters "11". (HDL-193)
+Presto compilation completed successfully. (lzc_unopt_WIDTH11)
+Module: lzc_unopt_WIDTH11, Ports: 15, Input: 11, Output: 4, Inout: 0
+Module: lzc_unopt_WIDTH11, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_unopt_WIDTH11 report end. (ELAB-965)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.r_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH11'. (LINK-25)
+1
+compile_ultra
+Loading db file '/import/programs/synopsys/syn/current/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.l_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH12'. (LINK-25)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.r_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH11'. (LINK-25)
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 1%, Ram Free: 64 GB, Swap Free: 3 GB, Work Disk Free: 41600 GB, Tmp Disk Free: 299 GB
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | X-2025.06-DWBB_202506.0 |     *     |
+| Licensed DW Building Blocks        | X-2025.06-DWBB_202506.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 13                                     |
+| Number of User Hierarchies                              | 0                                      |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 2                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 24 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'lzc_unopt'
+
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.l_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH12'. (LINK-25)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.r_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH11'. (LINK-25)
+Loaded alib file './alib-52/tcbn28hpcplusbwp30p140tt0p9v25c.db.alib'
+Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
+Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_NAND2'
+Information: Ungrouping 0 of 1 hierarchies before Pass 1 (OPT-775)
+CPU Load: 1%, Ram Free: 64 GB, Swap Free: 3 GB, Work Disk Free: 41600 GB, Tmp Disk Free: 299 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'lzc_unopt'
+ Implement Synthetic for 'lzc_unopt'.
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.l_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH12'. (LINK-25)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.r_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH11'. (LINK-25)
+CPU Load: 1%, Ram Free: 64 GB, Swap Free: 3 GB, Work Disk Free: 41600 GB, Tmp Disk Free: 299 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELBWP30P140' in the library 'tcbn28hpcplusbwp30p140tt0p9v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP30P140' in the library 'tcbn28hpcplusbwp30p140tt0p9v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Added key list 'DesignWare' to design 'lzc_unopt'. (DDB-72)
+Information: There is no timing violation in design lzc_unopt. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:04      13.2      0.00       0.0       3.6                             58.1059
+    0:00:04      13.2      0.00       0.0       3.6                             58.1059
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:04      13.2      0.00       0.0       3.6                             58.1059
+    0:00:04      13.2      0.00       0.0       3.6                             58.1059
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:05      13.2      0.00       0.0       3.6                             58.1059
+    0:00:05      13.2      0.00       0.0       3.6                             58.1059
+    0:00:05      13.2      0.00       0.0       3.6                             58.1059
+    0:00:05      13.2      0.00       0.0       3.6                             58.1059
+    0:00:05      13.2      0.00       0.0       3.6                             58.1059
+    0:00:05      13.2      0.00       0.0       3.6                             58.1059
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+
+
+  Beginning Design Rule Fixing  (min_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+    0:00:06      13.2      0.00       0.0       3.6                             58.1059
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:06      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+    0:00:07      13.2      0.00       0.0       3.6                             57.9735
+CPU Load: 1%, Ram Free: 64 GB, Swap Free: 3 GB, Work Disk Free: 41600 GB, Tmp Disk Free: 299 GB
+Loading db file '/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.l_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH12'. (LINK-25)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.r_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH11'. (LINK-25)
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+Warning: Design has unannotated black box outputs. (PWR-428)
+CPU Load: 1%, Ram Free: 64 GB, Swap Free: 3 GB, Work Disk Free: 41600 GB, Tmp Disk Free: 299 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+report_area
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.l_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH12'. (LINK-25)
+Error: Width mismatch on port 'ZeroCnt' of reference to 'lzc_unopt' in 'lzc_unopt'. (LINK-3)
+Error: Unable to match ports of cell genblk1.r_lcz ('lzc_unopt') to 'lzc_unopt_WIDTH11'. (LINK-25)
+ 
+****************************************
+Report : area
+Design : lzc_unopt
+Version: X-2025.06
+Date   : Fri Nov 21 10:00:35 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt0p9v25c (File: /import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db)
+
+Number of ports:                           28
+Number of nets:                            49
+Number of cells:                           14
+Number of combinational cells:             12
+Number of sequential cells:                 2
+Number of macros/black boxes:               0
+Number of buf/inv:                          0
+Number of references:                       9
+
+Combinational area:                 13.230000
+Buf/Inv area:                        0.000000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                    13.230000
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1
+report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : lzc_unopt
+Version: X-2025.06
+Date   : Fri Nov 21 10:00:35 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt0p9v25c (File: /import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db)
+
+
+Operating Conditions: tt0p9v25c   Library: tcbn28hpcplusbwp30p140tt0p9v25c
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+lzc_unopt              ZeroWireload      tcbn28hpcplusbwp30p140tt0p9v25c
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.1285 uW   (64%)
+  Net Switching Power  = 623.7823 nW   (36%)
+                         ---------
+Total Dynamic Power    =   1.7523 uW  (100%)
+
+Cell Leakage Power     =  56.9506 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.1285e-03        6.2378e-04           56.9506        1.8092e-03  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total          1.1285e-03 mW     6.2378e-04 mW        56.9506 nW     1.8092e-03 mW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : lzc_unopt
+Version: X-2025.06
+Date   : Fri Nov 21 10:00:35 2025
+****************************************
+
+Operating Conditions: tt0p9v25c   Library: tcbn28hpcplusbwp30p140tt0p9v25c
+Wire Load Model Mode: segmented
+
+  Startpoint: genblk1.l_lcz/p2[2] (internal pin)
+  Endpoint: ZeroCnt[4] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  lzc_unopt          ZeroWireload          tcbn28hpcplusbwp30p140tt0p9v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  genblk1.l_lcz/p2[2] (lzc_unopt)                         0.00       0.00 r
+  U1/ZN (CKND2D1BWP30P140)                                0.01       0.01 f
+  U2/ZN (NR4D0BWP30P140)                                  0.03       0.04 r
+  U6/Z (AN2D1BWP30P140)                                   0.03       0.06 r
+  DP_OP_4J1_122_8337/U6/CO (HA1D1BWP30P140)               0.02       0.08 r
+  DP_OP_4J1_122_8337/U5/CO (FA1D1BWP30P140)               0.02       0.11 r
+  DP_OP_4J1_122_8337/U4/CO (FA1D1BWP30P140)               0.03       0.13 r
+  DP_OP_4J1_122_8337/U3/CO (FA1D1BWP30P140)               0.02       0.16 r
+  U8/ZN (XNR3UD1BWP30P140)                                0.04       0.19 r
+  ZeroCnt[4] (out)                                        0.00       0.19 r
+  data arrival time                                                  0.19
+  --------------------------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+exit
+
+Memory usage for this session 596 Mbytes.
+Memory usage for this session including child processes 596 Mbytes.
+CPU usage for this session 14 seconds ( 0.00 hours ).
+Elapsed time for this session 15 seconds ( 0.00 hours ).
+
+Thank you...

@@ -5,8 +5,8 @@ set LIB_PATH "$PDK_PATH/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn2
 set_app_var target_library $LIB_PATH
 set_app_var link_library $LIB_PATH
 
-analyze -f sverilog "lzc_prior.sv"
-elaborate "lzc_prior"
+analyze -f sverilog "lzc_unopt.sv"
+elaborate "lzc_unopt"
 compile_ultra
 
 report_area

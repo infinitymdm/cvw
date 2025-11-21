@@ -7,7 +7,10 @@ set_app_var link_library $LIB_PATH
 
 analyze -format sverilog "../lzc.sv"
 elaborate "lzc"
-
 compile_ultra
+
+report_area
+report_power
+report_timing
 
 exit

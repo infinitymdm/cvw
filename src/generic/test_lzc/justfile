@@ -42,8 +42,9 @@ quartus-synth: _synth-prep
     quartus_sta -t quartus/quartus_prior.tcl 2>&1 | tee logs/prior/quartus.log # error expected
 
 dc-synth: _synth-prep
-    dc_shell-xg-t -f design_compiler/dc_recursive.tcl | tee logs/dc_recursive.log
-    dc_shell-xg-t -f design_compiler/dc_prior.tcl | tee logs/dc_prior.log
+    dc_shell-xg-t -f design_compiler/dc_recursive_opt.tcl | tee logs/recursive_opt/dc.log
+    dc_shell-xg-t -f design_compiler/dc_recursive_unopt.tcl | tee logs/recursive_unopt/dc.log
+    dc_shell-xg-t -f design_compiler/dc_prior.tcl | tee logs/prior/dc.log
 
 genus-synth: _synth-prep
     genus -f genus/genus_recursive.tcl | tee logs/genus_recursive.log
