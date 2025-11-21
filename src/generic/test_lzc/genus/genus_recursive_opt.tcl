@@ -5,8 +5,8 @@ set LIB_PATH "$PDK_PATH/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn2
 set_db lib_search_path $LIB_PATH
 set_db library "$LIB_PATH/tcbn28hpcplusbwp30p140tt0p9v25c.lib"
 
-read_hdl -sv "lzc_prior.sv"
-elaborate "lzc_prior"
+read_hdl -sv "../lzc.sv"
+elaborate "lzc"
 syn_generic
 
 report_area

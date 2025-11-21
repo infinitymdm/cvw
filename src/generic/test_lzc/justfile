@@ -47,8 +47,9 @@ dc-synth: _synth-prep
     dc_shell-xg-t -f design_compiler/dc_prior.tcl | tee logs/prior/dc.log
 
 genus-synth: _synth-prep
-    genus -f genus/genus_recursive.tcl | tee logs/genus_recursive.log
-    genus -f genus/genus_prior.tcl | tee logs/genus_prior.log
+    genus -f genus/genus_recursive_opt.tcl | tee logs/recursive_opt/genus.log
+    genus -f genus/genus_recursive_unopt.tcl | tee logs/recursive_unopt/genus.log
+    genus -f genus/genus_prior.tcl | tee logs/prior/genus.log
 
 vivado-synth: _synth-prep
     vivado -mode batch -source vivado/vivado_recursive_opt.tcl | tee logs/recursive_opt/vivado.log
