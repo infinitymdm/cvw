@@ -1,0 +1,765 @@
+No DISPLAY environment variable set.
+GUI mode requires a valid DISPLAY.
+Reverting to shell mode.
+
+TMPDIR is being set to /tmp/genus_temp_58902_yukari.ecen.okstate.edu_marcus_iglS6A
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2021 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+Version: 20.11-s111_1, built Mon Apr 26 12:57:38 PDT 2021
+Options: -files genus/genus_recursive_opt.tcl 
+Date:    Mon Dec 01 09:26:10 2025
+Host:    yukari.ecen.okstate.edu (x86_64 w/Linux 3.10.0-1160.119.1.el7.x86_64) (24cores*96cpus*2physical cpus*AMD EPYC 74F3 24-Core Processor 512KB) (131513436KB)
+PID:     58902
+OS:      Red Hat Enterprise Linux Server release 7.9 (Maipo)
+
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (5 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source genus/genus_recursive_opt.tcl
+#@ Begin verbose source ./genus/genus_recursive_opt.tcl
+@file(genus_recursive_opt.tcl) 3: set PDK_PATH "/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE"
+@file(genus_recursive_opt.tcl) 4: set LIB_PATH "$PDK_PATH/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a"
+@file(genus_recursive_opt.tcl) 5: set_db lib_search_path $LIB_PATH
+  Setting attribute of root '/': 'lib_search_path' = /import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a
+@file(genus_recursive_opt.tcl) 6: set_db library "$LIB_PATH/tcbn28hpcplusbwp30p140tt0p9v25c.lib"
+
+Threads Configured:3
+
+  Message Summary for Library tcbn28hpcplusbwp30p140tt0p9v25c.lib:
+  ****************************************************************
+  Missing a function attribute in the output pin definition. [LBR-518]: 1
+  An unsupported construct was detected in this library. [LBR-40]: 1
+  ****************************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 0.900000, 25.000000) in library 'tcbn28hpcplusbwp30p140tt0p9v25c.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNABWP30P140' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNABWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_LEFTBWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_LEFTBWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_RIGHTBWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'BOUNDARY_RIGHTBWP30P140' must have an output pin.
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLHQD20BWP30P140'
+        : To make the cell usable, change the value of 'dont_use' attribute to false.
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLHQD24BWP30P140'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLNQD20BWP30P140'
+Warning : Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false. [LBR-101]
+        : Clock gating integrated cell name: 'CKLNQD24BWP30P140'
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP32BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP32BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP4BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP4BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP64BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP64BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP8BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DCAP8BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL16BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL2BWP30P140' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FILL2BWP30P140' must have an output pin.
+  Setting attribute of root '/': 'library' = /import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.lib
+@file(genus_recursive_opt.tcl) 8: read_hdl -sv "../lzc.sv"
+@file(genus_recursive_opt.tcl) 9: elaborate "lzc"
+  Library has 530 usable logic and 349 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'lzc' from file '../lzc.sv'.
+Warning : Using default parameter value for module elaboration. [CDFG-818]
+        : Elaborating block 'lzc' with default parameters value.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'lzc'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: lzc, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: lzc, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(genus_recursive_opt.tcl) 10: syn_generic
+##Generic Timing Info for library domain: _default_ typical gate delay: 14.4 ps std_slew: 5.0 ps std_load: 1.6 fF
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: lzc, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Info    : Deleting instances not driving any primary outputs. [GLO-34]
+        : Deleting 23 hierarchical instances.
+        : Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign attribute to 'false' or 'preserve' instance attribute to 'true'.
+Info    : Synthesizing. [SYNTH-1]
+        : Synthesizing 'lzc' to generic gates using 'medium' effort.
+PBS_Generic-Start - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Start' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:05) |  00:00:00(00:00:00) |   0.0(  0.0) |    9:26:18 (Dec01) |  419.6 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+TNS Restructuring config: no_value at stage: generic applied.
+Info    : Partition Based Synthesis execution skipped. [PHYS-752]
+        : Design size is less than the partition size '100000' for distributed generic optimization to kick in.
+Starting mux data reorder optimization [v1.0] (stage: pre_to_gen_setup, startdef: lzc, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux data reorder optimization [v1.0] (stage: post_to_gen_setup, startdef: lzc, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------
+| Trick | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------
+--------------------------------------------
+Starting infer macro optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed infer macro optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting decode mux sandwich optimization [v2.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed decode mux sandwich optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting decode mux optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed decode mux optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting chop wide muxes [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed chop wide muxes (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting priority mux optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed priority mux optimization (accepts: 0, rejects: 0, runtime: 0.015s)
+Starting constant-data mux optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed constant-data mux optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting chain-to-tree inequality transform [v2.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed chain-to-tree inequality transform (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting reconvergence optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed reconvergence optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting logic restructure optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed logic restructure optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common select mux optimization [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed common select mux optimization (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting identity transform [v3.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed identity transform (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting reduce operator chain [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed reduce operator chain (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting common data mux cascade opt [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed common data mux cascade opt (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux input consolidation [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed mux input consolidation (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting optimize datapath elements [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed optimize datapath elements (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip mux common data inputs [v1.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting clip the non-user hierarchies [v2.0] (stage: pre_rtlopt, startdef: lzc, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+--------------------------------------------
+| Trick | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------
+--------------------------------------------
+Number of big hc bmuxes before = 0
+Info    : Pre-processed datapath logic. [DPOPT-6]
+        : No pre-processing optimizations applied to datapath logic in 'lzc'.
+Info    : Optimizing datapath logic. [DPOPT-1]
+        : Optimizing datapath logic in 'lzc'.
+Info    : Implementing datapath configurations. [DPOPT-3]
+        : Implementing datapath configurations for 'CDN_DP_region_0_0'
+CSAGen Prep Share:0 Re-Write:0 Speculation: 0
+MaxCSA: Successfully built Maximal CSA Expression Expr0
+MaxCSA: Successfully built Maximal CSA Expression Expr1
+MaxCSA: Successfully built Maximal CSA Expression Expr2
+MaxCSA: Successfully built Maximal CSA Expression Expr3
+MaxCSA: Successfully built Maximal CSA Expression Expr4
+MaxCSA: Successfully built Maximal CSA Expression Expr5
+MaxCSA: Successfully built Maximal CSA Expression Expr6
+MaxCSA: Successfully built Maximal CSA Expression Expr7
+MaxCSA: Successfully built Maximal CSA Expression Expr8
+MaxCSA: Successfully built Maximal CSA Expression Expr9
+MaxCSA: Successfully built Maximal CSA Expression Expr10
+MaxCSA: Successfully built Maximal CSA Expression Expr11
+MaxCSA: Successfully built Maximal CSA Expression Expr12
+MaxCSA: Successfully built Maximal CSA Expression Expr13
+MaxCSA: Successfully built Maximal CSA Expression Expr14
+MaxCSA: Successfully built Maximal CSA Expression Expr15
+MaxCSA: Successfully built Maximal CSA Expression Expr16
+MaxCSA: Successfully built Maximal CSA Expression Expr17
+MaxCSA: Successfully built Maximal CSA Expression Expr18
+MaxCSA: Successfully built Maximal CSA Expression Expr19
+MaxCSA: Successfully built Maximal CSA Expression Expr20
+MaxCSA: Successfully built Maximal CSA Expression Expr21
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c7 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c7 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c1 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c1 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c2 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c2 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c3 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c3 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c4 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c4 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c5 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c5 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c6 in lzc':
+	  (csa_tree_genblk1.l_lcz_genblk1.r_lcz_add_50_43, csa_tree_genblk1.l_lcz_genblk1.l_lcz_add_50_43)
+
+Info    : Accepted resource sharing opportunity. [RTLOPT-30]
+        : Merged the following sets of instances in 'CDN_DP_region_0_0_c6 in lzc':
+	  (final_adder_genblk1.l_lcz_genblk1.l_lcz_add_50_43, final_adder_genblk1.l_lcz_add_50_43, final_adder_add_50_43)
+
+CDN_DP_region_0_0 level = 0 loads = 0 drivers = 0
+CDN_DP_region_0_0_c0 in lzc: area: 212392092 ,dp = 22 mux = 22 sg = slow         worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ skipped
+CDN_DP_region_0_0_c1 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = fast         worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+CDN_DP_region_0_0_c2 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_slow    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+CDN_DP_region_0_0_c3 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_fast    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+CDN_DP_region_0_0_c4 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_fast    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+CDN_DP_region_0_0_c5 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_fast    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+CDN_DP_region_0_0_c6 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_fast    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+CDN_DP_region_0_0_c7 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_fast    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+ is current best
+Best config: CDN_DP_region_0_0_c7 in lzc: area: 410764904 ,dp = 17 mux = 33 sg = very_fast    worst_clk_period: 4786098041243769908851845485778509937338962379106462333802682410427088972994466920945374337901682077907262272745816911454322765717712009862273889092154784689755877580553498237337600.0000 
+    wns: 0  norm_wns:  40325467160639891939107161872223350930906429985759400501068442513742255318506716233746894429309894838636063722256919900340831429097223743915463146138422671522875357624751095808.0000 
+    fail_endp: 6439922292191409503 
+    tns:  0  tns_per_endp:  291613890184781412248798560762825520596766324691301462944749539331382652944808043078649770939034748308218626604575159251462194897789428079554659711424984649544871703239442076980604878721488799380243260341485568.0000   norm_tns_per_endp:  86379450328773235510588476785908150827469659358510222166779544597525521458166371810309068058612945911470452464523243470962050432438298160021954862514176.0000 
+    tns_sense_max:  34374891842664478686231394036244332128955125753432672109886863501924632858496559801634428069200523461684961607082242019389729828379480149103542223860520644712186601546797023232.0000  tns_sense_avg:  0.0000   tns_sense_num: 808804196
+  Smallest config area : 410764904.  Fastest config wns;  0
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>Summary table of configs (Best config is CDN_DP_region_0_0_c7)
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>                     0                  1                  2                  3                  4                  5                  6                  7            
+##>+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>           Area        212392092          410764904          410764904          410764904          410764904          410764904          410764904          410764904  
+##>            WNS    +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70      +214748364.70  
+##>            TNS                0                  0                  0                  0                  0                  0                  0                  0  
+##>    Num Rewrite                0                  2                  2                  2                  2                  2                  2                  2  
+##>     Num Factor                0                  0                  0                  0                  0                  0                  0                  0  
+##>      Num Share                0                  2                  2                  2                  2                  2                  2                  2  
+##>   Num CmultCse                0                  0                  0                  0                  0                  0                  0                  0  
+##>   Num Downsize                0                  0                  0                  0                  0                  0                  0                  0  
+##>  Num Speculate                0                  0                  0                  0                  0                  0                  0                  0  
+##>     Runtime(s)                0                  0                  0                  0                  0                  0                  0                  0  
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>
+##>
+##>+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>Optimization Step DEBUG Table for config CDN_DP_region_0_0_c7
+##>
+##>                          Step                        Area   ( % Chg)        WNS (Change)        TNS (Change)          Runtime (s)        Comment                   
+##>+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+##>EquationExtraction              START              212392092 (      )    214748364.70 (        )             0 (        )              
+##> rewrite                        START              225710408 ( +6.27)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr0_from --> Expr0_to
+##>                                  END              236224868 ( +4.66)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              236224868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr1_from --> Expr1_to
+##>                                  END              246739328 ( +4.45)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              246739328 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr2_from --> Expr2_to
+##>                                  END              257253788 ( +4.26)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              257253788 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr3_from --> Expr3_to
+##>                                  END              267768248 ( +4.09)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              267768248 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr4_from --> Expr4_to
+##>                                  END              278282708 ( +3.93)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              278282708 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr5_from --> Expr5_to
+##>                                  END              288797168 ( +3.78)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              288797168 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr6_from --> Expr6_to
+##>                                  END              299311628 ( +3.64)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              299311628 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr7_from --> Expr7_to
+##>                                  END              309826088 ( +3.51)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              309826088 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr8_from --> Expr8_to
+##>                                  END              320340548 ( +3.39)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              320340548 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr9_from --> Expr9_to
+##>                                  END              330855008 ( +3.28)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              330855008 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr10_from --> Expr10_to
+##>                                  END              342070432 ( +3.39)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              342070432 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr11_from --> Expr11_to
+##>                                  END              352584892 ( +3.07)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              352584892 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr12_from --> Expr12_to
+##>                                  END              372211884 ( +5.57)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              372211884 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr13_from --> Expr13_to
+##>                                  END              391838876 ( +5.27)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              391838876 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr14_from --> Expr14_to
+##>                                  END              411465868 ( +5.01)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr15_from --> Expr15_to
+##>                                  END              431092860 ( +4.77)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              431092860 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr16_from --> Expr16_to
+##>                                  END              450719852 ( +4.55)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              450719852 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr17_from --> Expr17_to
+##>                                  END              471047808 ( +4.51)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              471047808 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr18_from --> Expr18_to
+##>                                  END              499787332 ( +6.10)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              499787332 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr19_from --> Expr19_to
+##>                                  END              528526856 ( +5.75)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              528526856 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr20_from --> Expr20_to
+##>                                  END              571986624 ( +8.22)    214748364.70 (   +0.00)             0 (       0)           0  
+##> rewrite                        START              571986624 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) Expr21_from --> Expr21_to
+##>                                  END              614745428 ( +7.48)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>createMaxCarrySave              START              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##> datapath_rewrite_one_def       START              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##> speculate_in_gdef              START              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>  pre_speculate_mux_merge       START              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##> csa_opto                       START              212392092 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              427588040 (+101.32)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              427588040 (+101.32)    214748364.70 (   +0.00)             0 (       0)           0  
+##>canonicalize_by_names           START              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>datapath_rewrite_post_csa_one_  START              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>datapath_csa_factoring_one_gde  START              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dpopt_share_one_def             START              427588040 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( -3.77)    214748364.70 (   +0.00)             0 (       0)           0  
+##>datapath_rewrite_post_share     START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dp_combine_const_mult_with_com  START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>speculate_in_gdef               START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##> pre_speculate_mux_merge        START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dp_operator_level_decompositio  START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>selective_flatten_dp_config     START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>createMaxCarrySave              START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##> datapath_rewrite_one_def       START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>  fast_cse_elim                 START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>  fast_cse_elim                 START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>  rewrite                       START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) add_ci --> add_and_inc 
+##>                                  END              425485148 ( +3.41)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              425485148 ( +3.41)    214748364.70 (   +0.00)             0 (       0)           0  
+##> speculate_in_gdef              START              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>  pre_speculate_mux_merge       START              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##> csa_opto                       START              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( -3.29)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>datapath_rewrite_post_csa_one_  START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>datapath_csa_factoring_one_gde  START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dpopt_share_one_def             START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>datapath_rewrite_post_share     START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dp_combine_const_mult_with_com  START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>speculate_in_gdef               START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##> pre_speculate_mux_merge        START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dp_operator_level_decompositio  START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>selective_flatten_dp_config     START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>createMaxCarrySave              START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##> datapath_rewrite_one_def       START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>  fast_cse_elim                 START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>  fast_cse_elim                 START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>  rewrite                       START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              (a,ar) add_ci --> add_and_inc 
+##>                                  END              425485148 ( +3.41)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              425485148 ( +3.41)    214748364.70 (   +0.00)             0 (       0)           0  
+##> speculate_in_gdef              START              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>  pre_speculate_mux_merge       START              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##> csa_opto                       START              425485148 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              411465868 ( -3.29)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>context_based_simplify          START              411465868 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              410764904 ( -0.17)    214748364.70 (   +0.00)             0 (       0)           0  
+##>group_csa_final_adder_dp        START              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>dpopt_flatten_critical_muxes_i  START              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>speculate_in_gdef               START              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##> pre_speculate_mux_merge        START              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>                                  END              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>create_score                    START              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)              
+##>                                  END              410764904 ( +0.00)    214748364.70 (   +0.00)             0 (       0)           0  
+##>+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Committed config: CDN_DP_region_0_0_c7
+Info    : Done implementing datapath configurations. [DPOPT-4]
+        : Selected 'very_fast' configuration 7 for module 'CDN_DP_region_0_0'.
+          Optimizations applied to 'very_fast' configuration:
+            rewriting(2), factoring(0), sharing(2), cmultcse(0), downsizing(0), speculation(0)
+Info    : Done optimizing datapath logic. [DPOPT-2]
+        : Done optimizing datapath logic in 'lzc'.
+Number of big hc bmuxes after = 0
+Starting logic reduction [v1.0] (stage: post_rtlopt, startdef: lzc, recur: true)
+Completed logic reduction (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux data reorder optimization [v1.0] (stage: post_rtlopt, startdef: lzc, recur: true)
+Completed mux data reorder optimization (accepts: 0, rejects: 0, runtime: 0.000s)
+Starting mux speculation [v1.0] (stage: post_muxopt, startdef: lzc, recur: true)
+Starting speculation optimization
+Completed speculation optimization (accepts:0)
+Completed mux speculation (accepts: 0, rejects: 0, runtime: 0.007s)
+==================================
+Stage : to_generic 
+==================================
+  =================
+   Message Summary
+  =================
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|    Id     |  Sev   |Count |                                                                                                             Message Text                                                                                                              |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| CDFG-372  |Info    |    8 |Bitwidth mismatch in assignment.                                                                                                                                                                                                       |
+|           |        |      |Review and make sure the mismatch is unintentional. Genus can possibly issue bitwidth mismatch warning for explicit assignments present in RTL as-well-as for implicit assignments inferred by the tool. For example, in case of enum  |
+|           |        |      | declaration without value, the tool will implicitly assign value to the enum variables. It also issues the warning for any bitwidth mismatch that appears in this implicit assignment.                                                |
+| CDFG-488  |Info    |    2 |A negative value is used for the bounds in an array declaration.                                                                                                                                                                       |
+|           |        |      |Some tools may not support negative values in array bounds.                                                                                                                                                                            |
+| CDFG-818  |Warning |    1 |Using default parameter value for module elaboration.                                                                                                                                                                                  |
+| CWD-19    |Info    |  427 |An implementation was inferred.                                                                                                                                                                                                        |
+| DPOPT-1   |Info    |    1 |Optimizing datapath logic.                                                                                                                                                                                                             |
+| DPOPT-2   |Info    |    1 |Done optimizing datapath logic.                                                                                                                                                                                                        |
+| DPOPT-3   |Info    |    1 |Implementing datapath configurations.                                                                                                                                                                                                  |
+| DPOPT-4   |Info    |    1 |Done implementing datapath configurations.                                                                                                                                                                                             |
+| DPOPT-6   |Info    |    1 |Pre-processed datapath logic.                                                                                                                                                                                                          |
+| ELAB-1    |Info    |    1 |Elaborating Design.                                                                                                                                                                                                                    |
+| ELAB-2    |Info    |    7 |Elaborating Subdesign.                                                                                                                                                                                                                 |
+| ELAB-3    |Info    |    1 |Done Elaborating Design.                                                                                                                                                                                                               |
+| GB-6      |Info    |    1 |A datapath component has been ungrouped.                                                                                                                                                                                               |
+| GLO-34    |Info    |    1 |Deleting instances not driving any primary outputs.                                                                                                                                                                                    |
+|           |        |      |Optimizations such as constant propagation or redundancy removal could change the connections so a hierarchical instance does not drive any primary outputs anymore. To see the list of deleted hierarchical instances, set the        |
+|           |        |      | 'information_level' attribute to 2 or above. If the message is truncated set the message attribute 'truncate' to false to see the complete list. To prevent this optimization, set the 'delete_unloaded_insts' root/subdesign         |
+|           |        |      | attribute to 'false' or 'preserve' instance attribute to 'true'.                                                                                                                                                                      |
+| GLO-51    |Info    |   11 |Hierarchical instance automatically ungrouped.                                                                                                                                                                                         |
+|           |        |      |Hierarchical instances can be automatically ungrouped to allow for better area or timing optimization. To prevent this ungroup, set the root-level attribute 'auto_ungroup' to 'none'. You can also prevent individual ungroup with    |
+|           |        |      | setting the attribute 'ungroup_ok' of instances or modules to 'false'.                                                                                                                                                                |
+| LBR-9     |Warning |   86 |Library cell has no output pins defined.                                                                                                                                                                                               |
+|           |        |      |Add the missing output pin(s)                                                                                                                                                                                                          |
+|           |        |      | , then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as        |
+|           |        |      | unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason'  |
+|           |        |      | on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group         |
+|           |        |      | (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.                                                                                                                                       |
+| LBR-40    |Info    |    1 |An unsupported construct was detected in this library.                                                                                                                                                                                 |
+|           |        |      |Check to see if this construct is really needed for synthesis. Many liberty constructs are not actually required.                                                                                                                      |
+| LBR-41    |Info    |    1 |An output library pin lacks a function attribute.                                                                                                                                                                                      |
+|           |        |      |If the remainder of this library cell's semantic checks are successful, it will be considered as a timing-model (because one of its outputs does not have a valid function.                                                            |
+| LBR-101   |Warning |    4 |Unusable clock gating integrated cell found at the time of loading libraries. This warning happens because a particular library cell is defined as 'clock_gating_integrated_cell', but 'dont_use' attribute is defined as true in the  |
+|           |        |      | liberty library. To make Genus use this cell for clock gating insertion, 'dont_use' attribute should be set to false.                                                                                                                 |
+|           |        |      |To make the cell usable, change the value of 'dont_use' attribute to false.                                                                                                                                                            |
+| LBR-155   |Info    |   54 |Mismatch in unateness between 'timing_sense' attribute and the function.                                                                                                                                                               |
+|           |        |      |The 'timing_sense' attribute will be respected.                                                                                                                                                                                        |
+| LBR-161   |Info    |    1 |Setting the maximum print count of this message to 10 if information_level is less than 9.                                                                                                                                             |
+| LBR-162   |Info    |  228 |Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed.                                                                                                                                                                |
+|           |        |      |Setting the 'timing_sense' to non_unate.                                                                                                                                                                                               |
+| LBR-412   |Info    |    1 |Created nominal operating condition.                                                                                                                                                                                                   |
+|           |        |      |The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).           |
+| LBR-518   |Info    |    1 |Missing a function attribute in the output pin definition.                                                                                                                                                                             |
+| PHYS-752  |Info    |    1 |Partition Based Synthesis execution skipped.                                                                                                                                                                                           |
+| RTLOPT-30 |Info    |   14 |Accepted resource sharing opportunity.                                                                                                                                                                                                 |
+| RTLOPT-40 |Info    |   14 |Transformed datapath macro.                                                                                                                                                                                                            |
+| SYNTH-1   |Info    |    1 |Synthesizing.                                                                                                                                                                                                                          |
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Mapper: Libraries have:
+	domain _default_: 530 combo usable cells and 349 sequential usable cells
+Multi-threaded constant propagation [1|0] ...
+new_area=107948456  new_slack=214748364.70  new_is_better=1
+Multi-threaded Virtual Mapping    (8 threads, 8 of 96 CPUs usable)
+==================================
+Stage : first_condense 
+==================================
+  =================
+   Message Summary
+  =================
+---------------------------------------------------------------
+|  Id  |Sev  |Count |              Message Text               |
+---------------------------------------------------------------
+| GB-6 |Info |   21 |A datapath component has been ungrouped. |
+---------------------------------------------------------------
+ 
+Global mapping target info
+==========================
+Cost Group 'default' target slack: Unconstrained
+
+PBS_Generic_Opt-Post - Elapsed_Time 4, CPU_Time 3.941350999999999
+stamp 'PBS_Generic_Opt-Post' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:05) |  00:00:00(00:00:00) |   0.0(  0.0) |    9:26:18 (Dec01) |  419.6 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:13(00:00:09) |  00:00:03(00:00:04) | 100.0(100.0) |    9:26:22 (Dec01) |  419.6 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+PBS_Generic-Postgen HBO Optimizations - Elapsed_Time 0, CPU_Time 0.0
+stamp 'PBS_Generic-Postgen HBO Optimizations' being created for table 'pbs_debug'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:10(00:00:05) |  00:00:00(00:00:00) |   0.0(  0.0) |    9:26:18 (Dec01) |  419.6 MB | PBS_Generic-Start
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:13(00:00:09) |  00:00:03(00:00:04) | 100.0(100.0) |    9:26:22 (Dec01) |  419.6 MB | PBS_Generic_Opt-Post
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:13(00:00:09) |  00:00:00(00:00:00) |   0.0(  0.0) |    9:26:22 (Dec01) |  419.6 MB | PBS_Generic-Postgen HBO Optimizations
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: pbs_debug, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>=================== Cadence Confidential (Generic-Logical) ===================
+##>Main Thread Summary:
+##>----------------------------------------------------------------------------------------
+##>STEP                           Elapsed       WNS       TNS     Insts      Area    Memory
+##>----------------------------------------------------------------------------------------
+##>G:Initial                            0         -         -       293       448       419
+##>G:Setup                              0         -         -         -         -         -
+##>G:Launch ST                          0         -         -         -         -         -
+##>G:Design Partition                   0         -         -         -         -         -
+##>G:Create Partition Netlists          0         -         -         -         -         -
+##>G:Init Power                         0         -         -         -         -         -
+##>G:Budgeting                          0         -         -         -         -         -
+##>G:Derenv-DB                          0         -         -         -         -         -
+##>G:Debug Outputs                      0         -         -         -         -         -
+##>G:ST loading                         0         -         -         -         -         -
+##>G:Distributed                        0         -         -         -         -         -
+##>G:Timer                              0         -         -         -         -         -
+##>G:Assembly                           0         -         -         -         -         -
+##>G:DFT                                0         -         -         -         -         -
+##>G:Const Prop                         0         -         -        69        96       419
+##>G:Misc                               4
+##>----------------------------------------------------------------------------------------
+##>Total Elapsed                        4
+##>========================================================================================
+Info    : Done synthesizing. [SYNTH-2]
+        : Done synthesizing 'lzc' to generic gates.
+      flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   syn_gen
+@file(genus_recursive_opt.tcl) 12: report_area
+Warning : The details given in report might be incorrect or incomplete. [RPT-80]
+        : The design design:lzc should be mapped to get accurate area details.
+        : Map the design using syn_map before using the '-detail' option of the 'report_area' command.
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 20.11-s111_1
+  Generated on:           Dec 01 2025  09:26:22 am
+  Module:                 lzc
+  Technology library:     tcbn28hpcplusbwp30p140tt0p9v25c 110
+  Operating conditions:   tt0p9v25c (balanced_tree)
+  Wireload mode:          segmented
+  Area mode:              timing library
+============================================================
+
+Instance Module  Cell Count  Cell Area  Net Area   Total Area      Wireload     
+--------------------------------------------------------------------------------
+lzc                      69     96.032     0.000       96.032 ZeroWireload (S)  
+  (S) = wireload was automatically selected
+@file(genus_recursive_opt.tcl) 13: report_power
+Info    : Joules engine is used. [RPT-16]
+        : Joules engine is being used for the command report_power.
+Info   : ACTP-0001 [ACTPInfo] Activity propagation started for stim#0 netlist
+       : lzc
+Info   : ACTP-0009 [ACTPInfo] Activity Propagation Progress Report :   1%   2%   4%   5%   7%   8%  10%  11%  13%  14%  15%  17%  18%  20%  21%  23%  24%  26%  27%  28%  30%  31%  33%  34%  36%  37%  39%  40%  42%  43%  44%  46%  47%  49%  50%  52%  53%  55%  56%  57%  59%  60%  62%  63%  65%  66%  68%  69%  71%  72%  73%  75%  76%  78%  79%  81%  82%  84%  85%  86%  88%  89%  91%  92%  94%  95%  97%  98% 100%
+Info   : ACTP-0001 Activity propagation ended for stim#0
+Info   : PWRA-0001 [PwrInfo] compute_power effective options 
+       : -mode : vectorless
+       : -skip_propagation : 1
+       : -frequency_scaling_factor : 1.0
+       : -use_clock_freq : stim
+       : -stim :/stim#0
+       : -fromGenus : 1
+Info   : ACTP-0001 Timing initialization started
+Info   : ACTP-0001 Timing initialization ended
+Info   : PWRA-0002 [PwrInfo] Skipping activity propagation due to -skip_ap
+       : option....
+Warning: PWRA-0302 [PwrWarn] Frequency scaling is not applicable for vectorless
+       : flow. Ignoring frequency scaling.
+Warning: PWRA-0304 [PwrWarn] -stim option is not applicable with vectorless mode
+       : of power analysis, ignored this option.
+Info   : PWRA-0002 Started 'vectorless' power computation.
+Info   : PWRA-0002 Finished power computation.
+Info   : PWRA-0007 [PwrInfo] Completed successfully.
+       : Info=6, Warn=2, Error=0, Fatal=0
+Instance: /lzc
+Power Unit: W
+PDB Frames: /stim#0/frame#0
+  -------------------------------------------------------------------------
+    Category         Leakage     Internal    Switching        Total    Row%
+  -------------------------------------------------------------------------
+      memory     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+    register     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+       latch     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+       logic     8.58393e-08  3.83760e-07  0.00000e+00  4.69599e-07 100.00%
+        bbox     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+       clock     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+         pad     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+          pm     0.00000e+00  0.00000e+00  0.00000e+00  0.00000e+00   0.00%
+  -------------------------------------------------------------------------
+    Subtotal     8.58393e-08  3.83760e-07  0.00000e+00  4.69599e-07 100.00%
+  Percentage          18.28%       81.72%        0.00%      100.00% 100.00%
+  -------------------------------------------------------------------------
+@file(genus_recursive_opt.tcl) 14: report_timing -unconstrained
+============================================================
+  Generated by:           Genus(TM) Synthesis Solution 20.11-s111_1
+  Generated on:           Dec 01 2025  09:26:22 am
+  Module:                 lzc
+  Operating conditions:   tt0p9v25c (balanced_tree)
+  Wireload mode:          segmented
+  Area mode:              timing library
+============================================================
+
+
+Path 1: UNCONSTRAINED
+     Startpoint: (F) num[0]
+       Endpoint: (R) ZeroCnt[0]
+
+                   Capture    Launch  
+      Drv Adjust:+       0         0  
+                                      
+       Data Path:-     118            
+
+#-------------------------------------------------------------------------------------------------
+# Timing Point   Flags    Arc    Edge       Cell         Fanout Load Trans Delay Arrival Instance 
+#                                                               (fF)  (ps)  (ps)   (ps)  Location 
+#-------------------------------------------------------------------------------------------------
+  num[0]         (u)     -       F     (arrival)              2  3.0     0     0       0    (-,-) 
+  g1224/z        (u)     in_1->z R     unmapped_complex2      1  1.6     0     7       7    (-,-) 
+  g1377/z        (u)     in_0->z F     unmapped_complex2      1  1.5     0     7      14    (-,-) 
+  g1372/z        (u)     in_0->z R     unmapped_complex2      1  1.6     0     7      21    (-,-) 
+  g1366/z        (u)     in_0->z F     unmapped_complex2      1  1.5     0     7      28    (-,-) 
+  g1361/z        (u)     in_0->z R     unmapped_complex2      1  1.6     0     7      35    (-,-) 
+  g1359/z        (u)     in_0->z F     unmapped_complex2      1  1.5     0     7      42    (-,-) 
+  g1351/z        (u)     in_0->z R     unmapped_complex2      1  1.6     0     7      49    (-,-) 
+  g1345/z        (u)     in_1->z F     unmapped_complex2      1  1.5     0     7      56    (-,-) 
+  g1342/z        (u)     in_0->z R     unmapped_nand2         1  1.6     0     7      63    (-,-) 
+  g1339/z        (u)     in_0->z R     unmapped_or2           1  1.6     0     7      70    (-,-) 
+  g1334/z        (u)     in_0->z F     unmapped_complex2      1  1.5     0     7      77    (-,-) 
+  g1333/z        (u)     in_0->z R     unmapped_complex2      1  1.6     0     7      84    (-,-) 
+  g1330/z        (u)     in_0->z F     unmapped_complex2      1  1.5     0     7      91    (-,-) 
+  g1329/z        (u)     in_0->z R     unmapped_complex2      1  1.6     0     7      98    (-,-) 
+  g1325/z        (u)     in_0->z F     unmapped_complex2      1  1.5     0     7     105    (-,-) 
+  g1324/z        (u)     in_1->z R     unmapped_nand2         1  1.6     0     7     112    (-,-) 
+  g1323/z        (u)     in_0->z R     unmapped_complex2      1  0.0     0     6     118    (-,-) 
+  ZeroCnt[0]     -       -       R     (port)                 -    -     -     0     118    (-,-) 
+#-------------------------------------------------------------------------------------------------
+
+(u) : Net has unmapped pin(s).
+
+@file(genus_recursive_opt.tcl) 16: exit
+Normal exit.
