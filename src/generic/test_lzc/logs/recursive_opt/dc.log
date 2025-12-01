@@ -1,0 +1,518 @@
+Info: [VCS_SAVE_RESTORE_INFO] ASLR (Address Space Layout Randomization) is detected on the machine. To enable $save functionality, ASLR will be switched off and simv re-executed.
+Please use '-no_save' simv switch to avoid this.
+Information: License queuing is enabled. (DCSH-18)
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version X-2025.06 for linux64 - May 27, 2025 
+
+                    Copyright (c) 1988 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Current time:       Mon Dec  1 09:23:46 2025
+Hostname:           yukari.ecen.okstate.edu
+CPU Model:          AMD EPYC 74F3 24-Core Processor
+CPU Details:        Cores = 96 : Sockets = 2 : Cache Size = 512 KB : Freq = 3.19 GHz
+OS:                 Linux 3.10.0-1160.119.1.el7.x86_64
+RAM:                125 GB (Free  64 GB)
+Swap:                 3 GB (Free   3 GB)
+Work Filesystem:    /home/marcus mounted to patchy:/volume1/nfshome/marcus
+Tmp Filesystem:     / mounted to /dev/mapper/rhel_yukari-root
+Work Disk:          53622 GB (Free 41863 GB)
+Tmp Disk:           441 GB (Free 299 GB)
+
+CPU Load: 0%, Ram Free: 64 GB, Swap Free: 3 GB, Work Disk Free: 41863 GB, Tmp Disk Free: 299 GB
+# PDK setup
+# Change these variables to match your PDK
+set PDK_PATH "/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE"
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE
+set LIB_PATH "$PDK_PATH/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db"
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db
+set_app_var target_library $LIB_PATH
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db
+set_app_var link_library $LIB_PATH
+/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db
+analyze -format sverilog "../lzc.sv"
+Running PRESTO HDLC
+Compiling source file ../lzc.sv
+Presto compilation completed successfully.
+Loading db file '/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db'
+1
+elaborate "lzc"
+Loading db file '/import/programs/synopsys/syn/current/libraries/syn/gtech.db'
+Loading db file '/import/programs/synopsys/syn/current/libraries/syn/standard.sldb'
+  Loading link library 'tcbn28hpcplusbwp30p140tt0p9v25c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (lzc)
+Module: lzc, Ports: 29, Input: 23, Output: 6, Inout: 0
+Module: lzc, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc report end. (ELAB-965)
+Elaborated 1 design.
+Current design is now 'lzc'.
+Information: Building the design 'lzc' instantiated from design 'lzc' with
+	the parameters "16". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH16)
+Module: lzc_WIDTH16, Ports: 22, Input: 16, Output: 6, Inout: 0
+Module: lzc_WIDTH16, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH16 report end. (ELAB-965)
+Information: Building the design 'lzc' instantiated from design 'lzc' with
+	the parameters "7". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH7)
+Module: lzc_WIDTH7, Ports: 11, Input: 7, Output: 4, Inout: 0
+Module: lzc_WIDTH7, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH7 report end. (ELAB-965)
+Information: Building the design 'lzc' instantiated from design 'lzc_WIDTH16' with
+	the parameters "8". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH8)
+Module: lzc_WIDTH8, Ports: 13, Input: 8, Output: 5, Inout: 0
+Module: lzc_WIDTH8, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH8 report end. (ELAB-965)
+Information: Building the design 'lzc' instantiated from design 'lzc_WIDTH7' with
+	the parameters "4". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH4)
+Module: lzc_WIDTH4, Ports: 8, Input: 4, Output: 4, Inout: 0
+Module: lzc_WIDTH4, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH4 report end. (ELAB-965)
+Information: Building the design 'lzc' instantiated from design 'lzc_WIDTH7' with
+	the parameters "3". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH3)
+Module: lzc_WIDTH3, Ports: 6, Input: 3, Output: 3, Inout: 0
+Module: lzc_WIDTH3, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH3 report end. (ELAB-965)
+Information: Building the design 'lzc' instantiated from design 'lzc_WIDTH4' with
+	the parameters "2". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH2)
+Module: lzc_WIDTH2, Ports: 5, Input: 2, Output: 3, Inout: 0
+Module: lzc_WIDTH2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH2 report end. (ELAB-965)
+Information: Building the design 'lzc' instantiated from design 'lzc_WIDTH3' with
+	the parameters "1". (HDL-193)
+Presto compilation completed successfully. (lzc_WIDTH1)
+Module: lzc_WIDTH1, Ports: 3, Input: 1, Output: 2, Inout: 0
+Module: lzc_WIDTH1, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+Information: Module lzc_WIDTH1 report end. (ELAB-965)
+1
+compile_ultra
+Loading db file '/import/programs/synopsys/syn/current/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 0%, Ram Free: 63 GB, Swap Free: 3 GB, Work Disk Free: 41863 GB, Tmp Disk Free: 299 GB
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | X-2025.06-DWBB_202506.0 |     *     |
+| Licensed DW Building Blocks        | X-2025.06-DWBB_202506.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 200                                    |
+| Number of User Hierarchies                              | 44                                     |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Pad Count                                               | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 1                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 0                                      |
+| Number of Dont Touch Cells                              | 66                                     |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with Target Library Subset (with clock_path)     | false  (false )                        |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 7 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+Information: Uniquified 2 instances of design 'lzc_WIDTH8'. (OPT-1056)
+Information: Uniquified 5 instances of design 'lzc_WIDTH4'. (OPT-1056)
+Information: Uniquified 11 instances of design 'lzc_WIDTH2'. (OPT-1056)
+Information: Uniquified 23 instances of design 'lzc_WIDTH1'. (OPT-1056)
+  Simplifying Design 'lzc'
+
+Loaded alib file './alib-52/tcbn28hpcplusbwp30p140tt0p9v25c.db.alib'
+Module: DW01_NAND2, Ports: 3, Input: 2, Output: 1, Inout: 0
+Module: DW01_NAND2, Registers: 0, Async set/reset: 0, Sync set/reset: 0
+  Building model 'DW01_NAND2'
+Information: Ungrouping hierarchy genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.r_lcz before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz/genblk1.l_lcz before Pass 1 (OPT-776)
+Information: Ungrouping 44 of 45 hierarchies before Pass 1 (OPT-775)
+CPU Load: 0%, Ram Free: 63 GB, Swap Free: 3 GB, Work Disk Free: 41863 GB, Tmp Disk Free: 299 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'lzc'
+Information: Added key list 'DesignWare' to design 'lzc'. (DDB-72)
+ Implement Synthetic for 'lzc'.
+CPU Load: 0%, Ram Free: 63 GB, Swap Free: 3 GB, Work Disk Free: 41863 GB, Tmp Disk Free: 299 GB
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: The library cell 'TIELBWP30P140' in the library 'tcbn28hpcplusbwp30p140tt0p9v25c' is not characterized for internal power. (PWR-536)
+Information: The library cell 'TIEHBWP30P140' in the library 'tcbn28hpcplusbwp30p140tt0p9v25c' is not characterized for internal power. (PWR-536)
+Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: There is no timing violation in design lzc. Delay-based auto_ungroup will not be performed. (OPT-780)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+  Global Optimization (Phase 19)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+
+  Beginning Isolate Ports
+  -----------------------
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+    0:00:05      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+
+
+  Beginning Design Rule Fixing  (min_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+  Global Optimization (Phase 31)
+    0:00:06      19.2      0.00       0.0       2.9                             58.4265
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+    0:00:07      19.2      0.00       0.0       2.9                             58.1616
+CPU Load: 0%, Ram Free: 63 GB, Swap Free: 3 GB, Work Disk Free: 41863 GB, Tmp Disk Free: 299 GB
+Loading db file '/import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: There is no defined clock in the design. (PWR-80)
+CPU Load: 0%, Ram Free: 63 GB, Swap Free: 3 GB, Work Disk Free: 41863 GB, Tmp Disk Free: 299 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+report_area
+ 
+****************************************
+Report : area
+Design : lzc
+Version: X-2025.06
+Date   : Mon Dec  1 09:23:59 2025
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt0p9v25c (File: /import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db)
+
+Number of ports:                           29
+Number of nets:                            64
+Number of cells:                           41
+Number of combinational cells:             41
+Number of sequential cells:                 0
+Number of macros/black boxes:               0
+Number of buf/inv:                          9
+Number of references:                      18
+
+Combinational area:                 19.152000
+Buf/Inv area:                        2.268000
+Noncombinational area:               0.000000
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                    19.152000
+Total area:                 undefined
+1
+report_power
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : lzc
+Version: X-2025.06
+Date   : Mon Dec  1 09:23:59 2025
+****************************************
+
+
+Library(s) Used:
+
+    tcbn28hpcplusbwp30p140tt0p9v25c (File: /import/yukari1/pdk/TSMC/28/CMOS/HPC+/stclib/9-track/tcbn28hpcplusbwp30p140-set/tcbn28hpcplusbwp30p140_190a_FE/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn28hpcplusbwp30p140_180a/tcbn28hpcplusbwp30p140tt0p9v25c.db)
+
+
+Operating Conditions: tt0p9v25c   Library: tcbn28hpcplusbwp30p140tt0p9v25c
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+lzc                    ZeroWireload      tcbn28hpcplusbwp30p140tt0p9v25c
+
+
+Global Operating Voltage = 0.9  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   1.5578 uW   (70%)
+  Net Switching Power  = 677.2079 nW   (30%)
+                         ---------
+Total Dynamic Power    =   2.2350 uW  (100%)
+
+Cell Leakage Power     =  55.0337 nW
+
+Information: report_power power group summary does not include estimated clock tree power. (PWR-789)
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)  i
+register           0.0000            0.0000            0.0000            0.0000  (   0.00%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational  1.5578e-03        6.7721e-04           55.0337        2.2900e-03  ( 100.00%)
+--------------------------------------------------------------------------------------------------
+Total          1.5578e-03 mW     6.7721e-04 mW        55.0337 nW     2.2900e-03 mW
+1
+report_timing
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : lzc
+Version: X-2025.06
+Date   : Mon Dec  1 09:23:59 2025
+****************************************
+
+Operating Conditions: tt0p9v25c   Library: tcbn28hpcplusbwp30p140tt0p9v25c
+Wire Load Model Mode: segmented
+
+  Startpoint: num[20] (input port)
+  Endpoint: ZeroCnt[1] (output port)
+  Path Group: (none)
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  lzc                ZeroWireload          tcbn28hpcplusbwp30p140tt0p9v25c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  input external delay                     0.00       0.00 f
+  num[20] (in)                             0.00       0.00 f
+  U51/ZN (NR4D0BWP30P140)                  0.03       0.03 r
+  U54/ZN (ND3D1BWP30P140)                  0.02       0.05 f
+  U58/ZN (NR4D0BWP30P140)                  0.04       0.09 r
+  U64/ZN (NR2D1BWP30P140)                  0.01       0.10 f
+  U71/ZN (IND2D1BWP30P140)                 0.01       0.11 r
+  U72/ZN (AOI211D1BWP30P140)               0.01       0.12 f
+  U73/ZN (AOI211D1BWP30P140)               0.02       0.14 r
+  U74/ZN (OAI31D0BWP30P140)                0.01       0.16 f
+  ZeroCnt[1] (out)                         0.00       0.16 f
+  data arrival time                                   0.16
+  -----------------------------------------------------------
+  (Path is unconstrained)
+
+
+1
+exit
+
+Memory usage for this session 597 Mbytes.
+Memory usage for this session including child processes 597 Mbytes.
+CPU usage for this session 14 seconds ( 0.00 hours ).
+Elapsed time for this session 18 seconds ( 0.00 hours ).
+
+Thank you...
