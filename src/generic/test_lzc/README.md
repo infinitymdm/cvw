@@ -58,8 +58,8 @@ All designs were synthesized against the TSMC N28 PDK.
 | Design                  | Combinational Area | Combinational Power | Datapath Delay |
 | ----------------------- | -------------------| ------------------- | -------------- |
 | Prior                   | 19.404             | 3.104e-3 mW         | 0.17           |
-| Recursive (unoptimized) | 13.230             | 1.809e-3 mW         | 0.19           |
-| Recursive (optimized)   | 4.536              | 1.104e-3 mW         | 0.02           |
+| Recursive (unoptimized) | 20.790             | 2.264e-3 mW         | 0.12           |
+| Recursive (optimized)   | 19.152             | 2.290e-3 mW         | 0.16           |
 
 ### Cadence Genus 21.16
 
