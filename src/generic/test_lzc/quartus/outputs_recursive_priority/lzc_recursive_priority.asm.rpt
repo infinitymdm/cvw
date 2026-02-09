@@ -1,5 +1,5 @@
-Assembler report for lzc_recursive_opt
-Mon Feb  9 14:34:58 2026
+Assembler report for lzc_recursive_priority
+Mon Feb  9 14:35:31 2026
 Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: lzc_recursive_opt.sof
+  5. Assembler Device Options: lzc_recursive_priority.sof
   6. Assembler Messages
 
 
@@ -38,8 +38,8 @@ on the Quartus Prime software download page.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Feb  9 14:34:58 2026 ;
-; Revision Name         ; lzc_recursive_opt                     ;
+; Assembler Status      ; Successful - Mon Feb  9 14:35:31 2026 ;
+; Revision Name         ; lzc_recursive_priority                ;
 ; Top-level Entity Name ; lzc                                   ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CGXFC7C7F23C8                        ;
@@ -53,23 +53,23 @@ on the Quartus Prime software download page.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                          ;
-+----------------------------------------------------------------------------------------------------+
-; File Name                                                                                          ;
-+----------------------------------------------------------------------------------------------------+
-; /home/marcus/software/cvw/src/generic/test_lzc/quartus/outputs_recursive_opt/lzc_recursive_opt.sof ;
-+----------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; File Name                                                                                                    ;
++--------------------------------------------------------------------------------------------------------------+
+; /home/marcus/software/cvw/src/generic/test_lzc/quartus/outputs_recursive_priority/lzc_recursive_priority.sof ;
++--------------------------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------+
-; Assembler Device Options: lzc_recursive_opt.sof ;
-+----------------+--------------------------------+
-; Option         ; Setting                        ;
-+----------------+--------------------------------+
-; JTAG usercode  ; 0x00ECC5F3                     ;
-; Checksum       ; 0x00ECC5F3                     ;
-+----------------+--------------------------------+
++------------------------------------------------------+
+; Assembler Device Options: lzc_recursive_priority.sof ;
++----------------+-------------------------------------+
+; Option         ; Setting                             ;
++----------------+-------------------------------------+
+; JTAG usercode  ; 0x00ECC4E0                          ;
+; Checksum       ; 0x00ECC4E0                          ;
++----------------+-------------------------------------+
 
 
 +--------------------+
@@ -78,13 +78,13 @@ on the Quartus Prime software download page.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Mon Feb  9 14:34:54 2026
-Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
+    Info: Processing started: Mon Feb  9 14:35:27 2026
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lzc_recursive_priority -c lzc_recursive_priority
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 509 megabytes
-    Info: Processing ended: Mon Feb  9 14:34:58 2026
+    Info: Processing ended: Mon Feb  9 14:35:31 2026
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

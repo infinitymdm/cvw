@@ -29,15 +29,17 @@ verilator-run VLEN:
     cd verilator_build && ./Vtb +verilator+quiet && cd ..
 
 _synth-prep:
-    @mkdir -p logs/{recursive_opt,recursive_unopt,prior}
+    @mkdir -p logs/{recursive_opt,recursive_priority,recursive_unopt,prior}
 
 yosys-synth: _synth-prep
     yosys -p 'prep -top lzc' ../lzc.sv 2>&1 | tee logs/recursive_opt/yosys.log
+    yosys -p 'prep -top lzc' lzc_priority.sv 2>&1 | tee logs/recursive_priority/yosys.log
     yosys -p 'prep -top lzc_unopt' lzc_unopt.sv 2>&1 | tee logs/recursive_unopt/yosys.log
     yosys -p 'prep -top lzc_prior' lzc_prior.sv 2>&1 | tee logs/prior/yosys.log # error expected
 
 quartus-synth: _synth-prep
     quartus_sta -t quartus/quartus_recursive_opt.tcl 2>&1 | tee logs/recursive_opt/quartus.log
+    quartus_sta -t quartus/quartus_recursive_priority.tcl 2>&1 | tee logs/recursive_priority/quartus.log
     quartus_sta -t quartus/quartus_recursive_unopt.tcl 2>&1 | tee logs/recursive_unopt/quartus.log
     quartus_sta -t quartus/quartus_prior.tcl 2>&1 | tee logs/prior/quartus.log # error expected
 
@@ -53,6 +55,7 @@ genus-synth: _synth-prep
 
 vivado-synth: _synth-prep
     vivado -mode batch -source vivado/vivado_recursive_opt.tcl | tee logs/recursive_opt/vivado.log
+    vivado -mode batch -source vivado/vivado_recursive_priority.tcl | tee logs/recursive_priority/vivado.log
     vivado -mode batch -source vivado/vivado_recursive_unopt.tcl | tee logs/recursive_unopt/vivado.log
     vivado -mode batch -source vivado/vivado_prior.tcl | tee logs/prior/vivado.log
 

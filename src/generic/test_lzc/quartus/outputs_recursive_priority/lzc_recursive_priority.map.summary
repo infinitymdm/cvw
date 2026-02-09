@@ -1,7 +1,7 @@
-Analysis & Synthesis Status : Successful - Mon Feb  9 14:35:44 2026
+Analysis & Synthesis Status : Successful - Mon Feb  9 14:35:11 2026
 Quartus Prime Version : 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-Revision Name : lzc_recursive_unopt
-Top-level Entity Name : lzc_unopt
+Revision Name : lzc_recursive_priority
+Top-level Entity Name : lzc
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0

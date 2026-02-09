@@ -15,13 +15,13 @@ Info: Running Quartus Prime Timing Analyzer
     Info: Altera and sold by Altera or its authorized distributors.  Please
     Info: refer to the Altera Software License Subscription Agreements 
     Info: on the Quartus Prime software download page.
-    Info: Processing started: Fri Nov 21 12:23:57 2025
+    Info: Processing started: Mon Feb  9 14:34:30 2026
 Info: Command: quartus_sta -t quartus/quartus_recursive_opt.tcl
 Info (125061): Changed top-level design entity name to "lzc"
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Nov 21 12:23:58 2025
+    Info: Processing started: Mon Feb  9 14:34:30 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt --analysis_and_elaboration
 Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -46,14 +46,14 @@ Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value w
 Info (12128): Elaborating entity "lzc" for hierarchy "lzc:r_lcz|lzc:r_lcz" File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 49
 Warning (10230): Verilog HDL assignment warning at lzc.sv(50): truncated value with size 32 to match size of target (2) File: /home/marcus/software/cvw/src/generic/lzc.sv Line: 50
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 711 megabytes
-    Info: Processing ended: Fri Nov 21 12:24:01 2025
+    Info: Peak virtual memory: 710 megabytes
+    Info: Processing ended: Mon Feb  9 14:34:33 2026
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:10
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Nov 21 12:24:02 2025
+    Info: Processing started: Mon Feb  9 14:34:34 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
 Info (20034): Auto device selection is not supported for Cyclone V device family. The default device, 5CGXFC7C7F23C8, is set.
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -85,14 +85,14 @@ Info (21057): Implemented 53 device resources after synthesis - the final resour
     Info (21059): Implemented 6 output pins
     Info (21061): Implemented 24 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 470 megabytes
-    Info: Processing ended: Fri Nov 21 12:24:06 2025
+    Info: Peak virtual memory: 467 megabytes
+    Info: Processing ended: Mon Feb  9 14:34:38 2026
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Total CPU time (on all processors): 00:00:10
 Info: *******************************************************************
 Info: Running Quartus Prime Fitter
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Nov 21 12:24:06 2025
+    Info: Processing started: Mon Feb  9 14:34:39 2026
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
 Info: qfit2_default_script.tcl version: #1
 Info: Project  = lzc_recursive_opt
@@ -137,29 +137,29 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:01
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:02
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 2776 megabytes
-    Info: Processing ended: Fri Nov 21 12:24:21 2025
-    Info: Elapsed time: 00:00:15
+    Info: Peak virtual memory: 2777 megabytes
+    Info: Processing ended: Mon Feb  9 14:34:53 2026
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:46
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Nov 21 12:24:21 2025
+    Info: Processing started: Mon Feb  9 14:34:54 2026
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off lzc_recursive_opt -c lzc_recursive_opt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 509 megabytes
-    Info: Processing ended: Fri Nov 21 12:24:26 2025
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Mon Feb  9 14:34:58 2026
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 Info (293026): Skipped module Power Analyzer due to the assignment FLOW_ENABLE_POWER_ANALYZER
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
-    Info: Processing started: Fri Nov 21 12:24:26 2025
+    Info: Processing started: Mon Feb  9 14:34:59 2026
 Info: Command: quartus_sta lzc_recursive_opt -c lzc_recursive_opt
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -219,9 +219,9 @@ Info (332140): No Minimum Pulse Width paths to report
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 996 megabytes
-    Info: Processing ended: Fri Nov 21 12:24:29 2025
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 960 megabytes
+    Info: Processing ended: Mon Feb  9 14:35:01 2026
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 Info (293000): Quartus Prime Full Compilation was successful. 0 errors, 23 warnings
 Critical Warning (332199): Ignored -post_map option. The Timing Analyzer does not allow timing analysis of the post-synthesis netlist after you run the Fitter.
@@ -482,7 +482,7 @@ Info (332118): Minimum Propagation Delays
     Info (332118):                 8.919      8.917            num[22]              ZeroCnt[4]          
 Info (23030): Evaluation of Tcl script quartus/quartus_recursive_opt.tcl was successful
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 647 megabytes
-    Info: Processing ended: Fri Nov 21 12:24:30 2025
+    Info: Peak virtual memory: 651 megabytes
+    Info: Processing ended: Mon Feb  9 14:35:03 2026
     Info: Elapsed time: 00:00:33
     Info: Total CPU time (on all processors): 00:01:16
